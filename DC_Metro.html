@@ -1,0 +1,349 @@
+<html>
+<head>
+    <title>DC Metro Stations</title>    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" /> 
+	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+	
+<style>
+    #map {
+        width: 100%;
+        height: 810px;
+    }
+</style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+	var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+        });
+
+          var dcmap = L.map('map', {
+                center: [38.93, -77.01],
+                zoom: 11
+          });
+
+          dcmap.addLayer(layer);
+	
+	var blackIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/n/K/j/Q/u/d/square-black-crystal-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var blueIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/K/y/e/b/5/7/blue-square-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var greenIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/Y/b/n/p/J/M/green-square-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var orangeIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/j/x/1/N/q/M/dark-orange-locked-square-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var redIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/N/A/G/S/5/f/red-square-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var silverIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/o/e/3/K/h/g/626466-50-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+	var yellowIcon = L.icon({
+		iconUrl: 'http://www.clker.com/cliparts/8/6/m/O/X/y/yellow-square-button-th.png',
+		
+		iconSize:	 [20, 20],
+		iconAnchor:  [5, 5],
+		popupAnchor: [5, 5]
+	});
+	
+    var	Glenmont1 = L.marker([39.06229, -77.05320], {icon: redIcon}).addTo(dcmap);
+	var	Glenmont2 = L.marker([39.06192, -77.05373], {icon: redIcon}).addTo(dcmap);
+    var Wheaton1 = L.marker([39.03816, -77.05113], {icon: redIcon}).addTo(dcmap);
+	var Wheaton2 = L.marker([39.03864, -77.05021], {icon: redIcon}).addTo(dcmap);
+	var ForestGlen1 = L.marker([39.01531, -77.04317], {icon: redIcon}).addTo(dcmap);
+	var SilverSpring1 = L.marker([38.99385, -77.03135], {icon: redIcon}).addTo(dcmap);
+    var SilverSpring2 = L.marker([38.99416, -77.03177], {icon: redIcon}).addTo(dcmap);
+	var Takoma1 = L.marker([38.97556, -77.01789], {icon: redIcon}).addTo(dcmap);
+	var Takoma2 = L.marker([38.97501, -77.01757], {icon: redIcon}).addTo(dcmap);
+	var FortTotten1 = L.marker([38.95229, -77.00233], {icon: blackIcon}).addTo(dcmap);
+	var Brookland1 = L.marker([38.93379, -76.99444], {icon: redIcon}).addTo(dcmap);
+	var Brookland2 = L.marker([38.93380, -76.99502], {icon: redIcon}).addTo(dcmap);
+	var RhodeIsland1 = L.marker([38.92066, -76.99606], {icon: redIcon}).addTo(dcmap);
+	var NoMa1 = L.marker([38.90735, -77.00342], {icon: redIcon}).addTo(dcmap);
+	var UnionStation1 = L.marker([38.89754, -77.00551], {icon: redIcon}).addTo(dcmap);
+	var JudiciarySquare1 = L.marker([38.89702, -77.01755], {icon: redIcon}).addTo(dcmap);
+	var GalleryPlace1 = L.marker([38.89740, -77.02177], {icon: blackIcon}).addTo(dcmap);
+	var MetroCenter1 = L.marker([38.89822, -77.02948], {icon: blackIcon}).addTo(dcmap);
+	var FarragutNorth1 = L.marker([38.90280, -77.03924], {icon: redIcon}).addTo(dcmap);
+	var DupontCircle1 = L.marker([38.90848, -77.04336], {icon: redIcon}).addTo(dcmap);
+	var WoodleyPark1 = L.marker([38.92452, -77.05239], {icon: redIcon}).addTo(dcmap);
+	var ClevelandPark1 = L.marker([38.93598, -77.05854], {icon: redIcon}).addTo(dcmap);
+	var ClevelandPark2 = L.marker([38.93615, -77.05902], {icon: redIcon}).addTo(dcmap);
+	var VanNess1 = L.marker([38.94440, -77.06342], {icon: redIcon}).addTo(dcmap);
+	var VanNess2 = L.marker([38.94442, -77.06381], {icon: redIcon}).addTo(dcmap);
+	var Tenleytown1 = L.marker([38.94810, -77.07946], {icon: redIcon}).addTo(dcmap);
+	var Tenleytown2 = L.marker([38.94840, -77.08012], {icon: redIcon}).addTo(dcmap);
+	var FriendshipHeights1 = L.marker([38.96103, -77.08564], {icon: redIcon}).addTo(dcmap);
+	var FriendshipHeights2 = L.marker([38.96073, -77.08600], {icon: redIcon}).addTo(dcmap);
+	var Bethesda1 = L.marker([38.98415, -77.09388], {icon: redIcon}).addTo(dcmap);
+	var MedicalCenter1 = L.marker([38.99908, -77.09779], {icon: redIcon}).addTo(dcmap);
+	var Stathmore1 = L.marker([39.02901, -77.10378], {icon: redIcon}).addTo(dcmap);
+	var WhiteFlint1 = L.marker([39.04737, -77.11268], {icon: redIcon}).addTo(dcmap);
+	var WhiteFlint2 = L.marker([39.04719, -77.11323], {icon: redIcon}).addTo(dcmap);
+	var Twinbrook1 = L.marker([39.06246, -77.12051], {icon: redIcon}).addTo(dcmap);
+	var Twinbrook2 = L.marker([39.06226, -77.12085], {icon: redIcon}).addTo(dcmap);
+	var Rockville1 = L.marker([39.08464, -77.14625], {icon: redIcon}).addTo(dcmap);
+	var Rockville2 = L.marker([39.08443, -77.14657], {icon: redIcon}).addTo(dcmap);
+	var ShadyGrove1 = L.marker([39.12032, -77.16461], {icon: redIcon}).addTo(dcmap);
+	var ShadyGrove2 = L.marker([39.11989, -77.16495], {icon: redIcon}).addTo(dcmap);
+	var Greenbelt1 = L.marker([39.01104, -76.91104], {icon: greenIcon}).addTo(dcmap);
+	var CollegePark1 = L.marker([38.97819, -76.92801], {icon: greenIcon}).addTo(dcmap);
+	var CollegePark2 = L.marker([38.97833, -76.92882], {icon: greenIcon}).addTo(dcmap);
+	var PrinceGeorges1 = L.marker([38.96529, -76.95594], {icon: greenIcon}).addTo(dcmap);
+	var WestHyattsville1 = L.marker([38.95571, -76.96886], {icon: greenIcon}).addTo(dcmap);
+	var Petworth1 = L.marker([38.93690, -77.02421], {icon: blackIcon}).addTo(dcmap);
+	var ColumbiaHeights1 = L.marker([38.92890, -77.03245], {icon: blackIcon}).addTo(dcmap);
+	var ColumbiaHeights2 = L.marker([38.92861, -77.03301], {icon: blackIcon}).addTo(dcmap);
+	var USt1 = L.marker([38.91686, -77.02914], {icon: blackIcon}).addTo(dcmap);
+	var USt2 = L.marker([38.91682, -77.02598], {icon: blackIcon}).addTo(dcmap);
+	var Shaw1 = L.marker([38.91279, -77.02264], {icon: blackIcon}).addTo(dcmap);
+	var Shaw2 = L.marker([38.91452, -77.02174], {icon: blackIcon}).addTo(dcmap);
+	var MtVernon1 = L.marker([38.90556, -77.02212], {icon: blackIcon}).addTo(dcmap);
+	var Archives1 = L.marker([38.89396, -77.02255], {icon: blackIcon}).addTo(dcmap);
+	var LEnfant1 = L.marker([38.88624, -77.02166], {icon: blackIcon}).addTo(dcmap);
+	var Waterfront1 = L.marker([38.87698, -77.01757], {icon: greenIcon}).addTo(dcmap);
+	var NavyYard1 = L.marker([38.87603, -77.00442], {icon: greenIcon}).addTo(dcmap);
+	var NavyYard2 = L.marker([38.87667, -77.00451], {icon: greenIcon}).addTo(dcmap);
+	var Anacostia1 = L.marker([38.86216, -76.99543], {icon: greenIcon}).addTo(dcmap);
+	var CongressHeights1 = L.marker([38.84632, -76.98846], {icon: greenIcon}).addTo(dcmap);
+	var SouthernAve1 = L.marker([38.84046, -76.97582], {icon: greenIcon}).addTo(dcmap);
+	var NaylorRd1 = L.marker([38.85093, -76.95682], {icon: greenIcon}).addTo(dcmap);
+	var Suitland1 = L.marker([38.84421, -76.93235], {icon: greenIcon}).addTo(dcmap);
+	var BranchAve1 = L.marker([38.82720, -76.91260], {icon: greenIcon}).addTo(dcmap);
+	var FederalCenter1 = L.marker([38.88489, -77.01539], {icon: blackIcon}).addTo(dcmap);
+	var CapitolSouth1 = L.marker([38.88560, -77.00607], {icon: blackIcon}).addTo(dcmap);
+	var EasternMarket1 = L.marker([38.88422, -76.99573], {icon: blackIcon}).addTo(dcmap);
+	var PotomacAve1 = L.marker([38.88082, -76.98519], {icon: blackIcon}).addTo(dcmap);
+	var StadiumArmory1 = L.marker([38.88563, -76.97705], {icon: blackIcon}).addTo(dcmap);
+	var MinnesotaAve1 = L.marker([38.89920, -76.94728], {icon: orangeIcon}).addTo(dcmap);
+	var MinnesotaAve2 = L.marker([38.89877, -76.94675], {icon: orangeIcon}).addTo(dcmap);
+	var Deanwood1 = L.marker([38.90858, -76.93521], {icon: orangeIcon}).addTo(dcmap);
+	var Deanwood2 = L.marker([38.90826, -76.93473], {icon: orangeIcon}).addTo(dcmap);
+	var Cheverly1 = L.marker([38.91622, -76.91673], {icon: orangeIcon}).addTo(dcmap);
+	var Landover1 = L.marker([38.93347, -76.89117], {icon: orangeIcon}).addTo(dcmap);
+	var NewCarrollton1 = L.marker([38.94795, -76.87173], {icon: orangeIcon}).addTo(dcmap);
+	var NewCarrollton2 = L.marker([38.94837, -76.87223], {icon: orangeIcon}).addTo(dcmap);
+	var BenningRd1 = L.marker([38.89046, -76.93755], {icon: blackIcon}).addTo(dcmap);
+	var CapitolHeights1 = L.marker([38.88925, -76.91321], {icon: blackIcon}).addTo(dcmap);
+	var AddisonRd1 = L.marker([38.88672, -76.89569], {icon: blackIcon}).addTo(dcmap);
+	var MorganBlvd1 = L.marker([38.89375, -76.86841], {icon: blackIcon}).addTo(dcmap);
+	var Largo1 = L.marker([38.90046, -76.84473], {icon: blackIcon}).addTo(dcmap);
+	var Smithsonian1 = L.marker([38.88741, -77.02844], {icon: blackIcon}).addTo(dcmap);
+	var FederalTriangle1 = L.marker([38.89419, -77.03001], {icon: blackIcon}).addTo(dcmap);
+	var McPhersonSq1 = L.marker([38.90122, -77.03219], {icon: blackIcon}).addTo(dcmap); 
+	var FarragutWest1 = L.marker([38.90148, -77.04185], {icon: blackIcon}).addTo(dcmap); 
+	var FarragutWest2 = L.marker([38.90121, -77.03897], {icon: blackIcon}).addTo(dcmap); 
+	var FoggyBottom1 = L.marker([38.90088, -77.05034], {icon: blackIcon}).addTo(dcmap);
+	var Rosslyn1 = L.marker([38.89595, -77.07173], {icon: blackIcon}).addTo(dcmap);
+	var Courthouse1 = L.marker([38.89126, -77.08498], {icon: blackIcon}).addTo(dcmap);
+	var Clarendon1 = L.marker([38.88707, -77.09525], {icon: blackIcon}).addTo(dcmap);
+	var VirginiaSq1 = L.marker([38.88284, -77.10329], {icon: blackIcon}).addTo(dcmap);
+	var Ballston1 = L.marker([38.88192, -77.11132], {icon: blackIcon}).addTo(dcmap);
+	var EastFallsChurch1 = L.marker([38.88586, -77.15649], {icon: blackIcon}).addTo(dcmap);
+	var WestFallsChurch1 = L.marker([38.90112, -77.18886], {icon: orangeIcon}).addTo(dcmap);
+	var WestFallsChurch2 = L.marker([38.90031, -77.18888], {icon: orangeIcon}).addTo(dcmap);
+	var DunnLoring1 = L.marker([38.88282, -77.22843], {icon: orangeIcon}).addTo(dcmap);
+	var Vienna1 = L.marker([38.87831, -77.27153], {icon: orangeIcon}).addTo(dcmap);
+	var Vienna2 = L.marker([38.87736, -77.27125], {icon: orangeIcon}).addTo(dcmap);
+	var McLean1 = L.marker([38.92461, -77.20824], {icon: silverIcon}).addTo(dcmap);
+    var McLean2 = L.marker([38.92469, -77.20958], {icon: silverIcon}).addTo(dcmap);	
+	var TysonsCorner1 = L.marker([38.92065, -77.22208], {icon: silverIcon}).addTo(dcmap); 
+	var TysonsCorner2 = L.marker([38.91977, -77.22222], {icon: silverIcon}).addTo(dcmap); 
+	var Greensboro1 = L.marker([38.92108, -77.23304], {icon: silverIcon}).addTo(dcmap); 
+	var Greensboro2 = L.marker([38.92057, -77.23406], {icon: silverIcon}).addTo(dcmap); 
+	var SpringHill1 = L.marker([38.92925, -77.24090], {icon: silverIcon}).addTo(dcmap);
+    var SpringHill2 = L.marker([38.92843, -77.24171], {icon: silverIcon}).addTo(dcmap); 	
+	var RestonEast1 = L.marker([38.94844, -77.33891], {icon: silverIcon}).addTo(dcmap); 
+	var RestonEast2 = L.marker([38.94694, -77.33990], {icon: silverIcon}).addTo(dcmap);
+	var ArlingtonCemetary1 = L.marker([38.88460, -77.06362], {icon: blueIcon}).addTo(dcmap);
+	var ArlingtonCemetary2 = L.marker([38.88424, -77.06352], {icon: blueIcon}).addTo(dcmap);
+	var Pentagon1 = L.marker([38.86922, -77.05383], {icon: blackIcon}).addTo(dcmap);
+	var PentagonCity1 = L.marker([38.86262, -77.05910], {icon: blackIcon}).addTo(dcmap);
+	var PentagonCity2 = L.marker([38.86268, -77.05988], {icon: blackIcon}).addTo(dcmap);
+	var CrystalCity1 = L.marker([38.85802, -77.05135], {icon: blackIcon}).addTo(dcmap);
+	var ReaganNational1 = L.marker([38.85233, -77.04353], {icon: blackIcon}).addTo(dcmap);
+	var ReaganNational2 = L.marker([38.85461, -77.04452], {icon: blackIcon}).addTo(dcmap);
+	var BraddockRd1 = L.marker([38.81394, -77.05371], {icon: blackIcon}).addTo(dcmap);
+	var OldTown1 = L.marker([38.80732, -77.05977], {icon: blackIcon}).addTo(dcmap);
+	var OldTown2 = L.marker([38.80629, -77.06129], {icon: blackIcon}).addTo(dcmap);
+	var EisenhowerAve1 = L.marker([38.80046, -77.07124], {icon: yellowIcon}).addTo(dcmap);
+	var EisenhowerAve2 = L.marker([38.80035, -77.07099], {icon: yellowIcon}).addTo(dcmap);
+	var Huntington1 = L.marker([38.79469, -77.07517], {icon: yellowIcon}).addTo(dcmap);
+	var Huntington2 = L.marker([38.79299, -77.07542], {icon: yellowIcon}).addTo(dcmap);
+	var VanDorn1 = L.marker([38.79958, -77.12914], {icon: blueIcon}).addTo(dcmap);
+	var Franconia1 = L.marker([38.76708, -77.16938], {icon: blueIcon}).addTo(dcmap);
+	var Franconia2 = L.marker([38.76601, -77.16844], {icon: blueIcon}).addTo(dcmap);
+	
+	Glenmont1.bindPopup("<b>Glemont:<br>East Entrance</b><br>Red Line");
+	Glenmont2.bindPopup("<b>Glemont:<br>West Entrance</b><br>Red Line");
+	Wheaton1.bindPopup("<b>Wheaton:<br>West Entrance</b><br>Red Line");
+	Wheaton2.bindPopup("<b>Wheaton:<br>East Entrance</b><br>Red Line");
+	ForestGlen1.bindPopup("<b>Forest Glen</b><br>Red Line");
+	SilverSpring1.bindPopup("<b>Silver Spring:<br>South Entrance</b><br>Red Line");
+	SilverSpring2.bindPopup("<b>Silver Spring:<br>North Entrance</b><br>Red Line");
+	Takoma1.bindPopup("<b>Takoma:<br>Park and Ride Entrance</b><br>Red Line");
+	Takoma2.bindPopup("<b>Takoma:<br>Carroll Street Entrance</b><br>Red Line");
+	FortTotten1.bindPopup("<b>Fort Totten</b><br>Green Line<br>Red Line<br>Yellow Line");
+	Brookland1.bindPopup("<b>Brookland/CUA:<br>East Entrance</b><br>Red Line");
+	Brookland2.bindPopup("<b>Brookland/CUA:<br>West Entrance</b><br>Red Line");
+	RhodeIsland1.bindPopup("<b>Rhode Island Ave</b><br>Red Line");
+	NoMa1.bindPopup("<b>NoMa/Gallaudet U</b><br>Red Line");
+	UnionStation1.bindPopup("<b>Union Station</b><br>Red Line");
+	JudiciarySquare1.bindPopup("<b>Judiciary Square</b><br>Red Line");
+	GalleryPlace1.bindPopup("<b>Gallery Place</b><br>Green Line<br>Red Line<br>Yellow Line");
+	MetroCenter1.bindPopup("<b>Metro Center</b><br>Blue Line<br>Orange Line<br>Red Line<br>Silver Line");
+	FarragutNorth1.bindPopup("<b>Farragut North</b><br>Red Line");
+	DupontCircle1.bindPopup("<b>Dupont Circle</b><br>Red Line");
+	WoodleyPark1.bindPopup("<b>Woodley Park</b><br>Red Line");
+	ClevelandPark1.bindPopup("<b>Cleveland Park:<br>East Entrance</b><br>Red Line");
+	ClevelandPark2.bindPopup("<b>Cleveland Park:<br>West Entrance</b><br>Red Line");
+	VanNess1.bindPopup("<b>Van Ness/UDC:<br>East Entrance</b><br>Red Line");
+	VanNess2.bindPopup("<b>Van Ness/UDC:<br>West Entrance</b><br>Red Line");
+	Tenleytown1.bindPopup("<b>Tenleytown/AU:<br>East Entrance</b><br>Red Line");
+	Tenleytown2.bindPopup("<b>Tenleytown/AU:<br>West Entrance</b><br>Red Line");
+	FriendshipHeights1.bindPopup("<b>Friendship Heights:<br>East Entrance</b><br>Red Line");
+	FriendshipHeights2.bindPopup("<b>Friendship Heights:<br>West Entrance</b><br>Red Line");
+	Bethesda1.bindPopup("<b>Bethesda</b><br>Red Line");
+	MedicalCenter1.bindPopup("<b>Medical Center</b><br>Red Line");
+	Stathmore1.bindPopup("<b>Grosvenor/Strathmore</b><br>Red Line");
+	WhiteFlint1.bindPopup("<b>White Flint:<br>East Entrance</b><br>Red Line");
+	WhiteFlint2.bindPopup("<b>White Flint:<br>West Entrance</b><br>Red Line");
+	Twinbrook1.bindPopup("<b>Twinbrook:<br>East Entrance</b><br>Red Line");
+	Twinbrook2.bindPopup("<b>Twinbrook:<br>West Entrance</b><br>Red Line");
+	Rockville1.bindPopup("<b>Rockville:<br>East Entrance</b><br>Red Line");
+	Rockville2.bindPopup("<b>Rockville:<br>West Entrance</b><br>Red Line");
+	ShadyGrove1.bindPopup("<b>Shady Grove:<br>East Entrance</b><br>Red Line");
+	ShadyGrove2.bindPopup("<b>Shady Grove:<br>West Entrance</b><br>Red Line");
+	Greenbelt1.bindPopup("<b>Greenbelt</b><br>Green Line");
+	CollegePark1.bindPopup("<b>College Park/University of Maryland:<br>East Entrance</b><br>Green Line");
+	CollegePark2.bindPopup("<b>College Park/University of Maryland:<br>West Entrance</b><br>Green Line");
+	PrinceGeorges1.bindPopup("<b>Prince George's Plaza</b><br>Green Line");
+	WestHyattsville1.bindPopup("<b>West Hyattsville</b><br>Green Line");
+	Petworth1.bindPopup("<b>Georgia Ave/Petworth</b><br>Green Line<br>Yellow Line");
+	ColumbiaHeights1.bindPopup("<b>Columbia Heights:<br>East Entrance</b><br>Green Line<br>Yellow Line");
+	ColumbiaHeights2.bindPopup("<b>Columbia Heights:<br>West Entrance</b><br>Green Line<br>Yellow Line");
+	USt1.bindPopup("<b>U Street:<br>10th Street Entrance</b><br>Green Line<br>Yellow Line");
+	USt2.bindPopup("<b>U Street:<br>13th Street Entrance</b><br>Green Line<br>Yellow Line");
+	Shaw1.bindPopup("<b>Shaw/Howard U:<br>8th and R Entrance</b><br>Green Line<br>Yellow Line");
+	Shaw2.bindPopup("<b>Shaw/Howard U:<br>7th and S Entrance</b><br>Green Line<br>Yellow Line");
+	MtVernon1.bindPopup("<b>Mount Vernon Square</b><br>Green Line<br>Yellow Line");
+	Archives1.bindPopup("<b>Archives</b><br>Green Line<br>Yellow Line");
+	LEnfant1.bindPopup("<b>L'Enfant Plaza</b><br>Blue Line<br>Green Line<br>Orange Line<br>Silver Line<br>Yellow Line");
+	Waterfront1.bindPopup("<b>Waterfront</b><br>Green Line");
+	NavyYard1.bindPopup("<b>Navy Yard/Ballpark:<br>South Entrance</b><br>Green Line");
+	NavyYard2.bindPopup("<b>Navy Yard/Ballpark:<br>North Entrance</b><br>Green Line");
+	Anacostia1.bindPopup("<b>Anacostia</b><br>Green Line");
+	CongressHeights1.bindPopup("<b>Congress Heights</b><br>Green Line");
+	SouthernAve1.bindPopup("<b>Southern Ave</b><br>Green Line");
+	NaylorRd1.bindPopup("<b>Naylor Road</b><br>Green Line");
+	Suitland1.bindPopup("<b>Suitland</b><br>Green Line");
+	BranchAve1.bindPopup("<b>Branch Ave</b><br>Green Line");
+	FederalCenter1.bindPopup("<b>Federal Center SW</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	CapitolSouth1.bindPopup("<b>Capitol South</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	EasternMarket1.bindPopup("<b>Eastern Market</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	PotomacAve1.bindPopup("<b>Potomac Ave</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	StadiumArmory1.bindPopup("<b>Stadium-Armory</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	MinnesotaAve1.bindPopup("<b>Minnesota Ave:<br>North Entrance</b><br>Orange Line");
+	MinnesotaAve2.bindPopup("<b>Minnesota Ave:<br>South Entrance</b><br>Orange Line");
+	Deanwood1.bindPopup("<b>Deanwood:<br>Polk Ave Entrance</b><br>Orange Line");
+	Deanwood2.bindPopup("<b>Deanwood:<br>Minnesota Ave Entrance</b><br>Orange Line");
+	Cheverly1.bindPopup("<b>Cheverly</b><br>Orange Line");
+	Landover1.bindPopup("<b>Landover</b><br>Orange Line");
+	NewCarrollton1.bindPopup("<b>New Carollton:<br>Garden City Drive Entrance</b><br>Orange Line");
+	NewCarrollton2.bindPopup("<b>New Carollton:<br>Ellin Road Entrance</b><br>Orange Line");
+	BenningRd1.bindPopup("<b>Benning Road</b><br>Blue Line<br>Silver Line");
+	CapitolHeights1.bindPopup("<b>Capitol Heights</b><br>Blue Line<br>Silver Line");
+	AddisonRd1.bindPopup("<b>Addison Road</b><br>Blue Line<br>Silver Line");
+	MorganBlvd1.bindPopup("<b>Morgan Blvd</b><br>Blue Line<br>Silver Line");
+	Largo1.bindPopup("<b>Largo Town Center</b><br>Blue Line<br>Silver Line");
+	Smithsonian1.bindPopup("<b>Smithsonian</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	FederalTriangle1.bindPopup("<b>Federal Triangle</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	McPhersonSq1.bindPopup("<b>McPherson Square</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	FarragutWest1.bindPopup("<b>Farragut West:<br>18th Street Entrance</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	FarragutWest2.bindPopup("<b>Farragut West:<br>17th Street Entrance</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	FoggyBottom1.bindPopup("<b>Foggy Bottom</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	Rosslyn1.bindPopup("<b>Rosslyn</b><br>Blue Line<br>Orange Line<br>Silver Line");
+	Courthouse1.bindPopup("<b>Court House</b><br>Orange Line<br>Silver Line");
+	Clarendon1.bindPopup("<b>Clarendon</b><br>Orange Line<br>Silver Line");
+	VirginiaSq1.bindPopup("<b>Virginia Square/GMU</b><br>Orange Line<br>Silver Line");
+	Ballston1.bindPopup("<b>Ballston/MU</b><br>Orange Line<br>Silver Line");
+	EastFallsChurch1.bindPopup("<b>East Falls Church</b><br>Orange Line<br>Silver Line");
+	WestFallsChurch1.bindPopup("<b>West Falls Church:<br>North Entrance</b><br>Orange Line");
+	WestFallsChurch2.bindPopup("<b>West Falls Church:<br>South Entrance</b><br>Orange Line");
+	DunnLoring1.bindPopup("<b>Dunn Loring</b><br>Orange Line");
+	Vienna1.bindPopup("<b>Vienna:<br>North Entrance</b><br>Orange Line");
+	Vienna2.bindPopup("<b>Vienna:<br>South Entrance</b><br>Orange Line");
+	McLean1.bindPopup("<b>McLean:<br>Colshire Drive Entrance</b><br>Silver Line");
+	McLean2.bindPopup("<b>McLean:<br>Main Entrance</b><br>Silver Line");
+	TysonsCorner1.bindPopup("<b>McLean:<br>North Entrance</b><br>Silver Line");
+	TysonsCorner2.bindPopup("<b>McLean:<br>South Entrance</b><br>Silver Line");
+	Greensboro1.bindPopup("<b>Greensboro:<br>North Entrance</b><br>Silver Line");
+	Greensboro2.bindPopup("<b>Greensboro:<br>South Entrance</b><br>Silver Line");
+	SpringHill1.bindPopup("<b>Spring Hill:<br>North Entrance</b><br>Silver Line");
+	SpringHill2.bindPopup("<b>Spring Hill:<br>South Entrance</b><br>Silver Line");
+	RestonEast1.bindPopup("<b>Reston East:<br>North Entrance</b><br>Silver Line");
+	RestonEast2.bindPopup("<b>Reston East:<br>South Entrance</b><br>Silver Line");
+	ArlingtonCemetary1.bindPopup("<b>Arlington Cemetary:<br>North Entrance</b><br>Blue Line");
+	ArlingtonCemetary2.bindPopup("<b>Arlington Cemetary:<br>South Entrance</b><br>Blue Line");
+	Pentagon1.bindPopup("<b>Pentagon</b><br>Blue Line<br>Yellow Line");
+	PentagonCity1.bindPopup("<b>Pentagon City:<br>East Entrance</b><br>Blue Line<br>Yellow Line");
+	PentagonCity2.bindPopup("<b>Pentagon City:<br>West Entrance</b><br>Blue Line<br>Yellow Line");
+	CrystalCity1.bindPopup("<b>Crystal City</b><br>Blue Line<br>Yellow Line");
+	ReaganNational1.bindPopup("<b>Ronald Reagan Washington National Airport:<br>South Entrance</b><br>Blue Line<br>Yellow Line");
+	ReaganNational2.bindPopup("<b>Ronald Reagan Washington National Airport:<br>North Entrance</b><br>Blue Line<br>Yellow Line");
+	BraddockRd1.bindPopup("<b>Braddock Road</b><br>Blue Line<br>Yellow Line");
+	OldTown1.bindPopup("<b>King Street/Old Town:<br>North Entrance</b><br>Blue Line<br>Yellow Line");
+	OldTown2.bindPopup("<b>King Street/Old Town:<br>South Entrance</b><br>Blue Line<br>Yellow Line");
+	EisenhowerAve1.bindPopup("<b>Eisenhower Ave:<br>West Entrance</b><br>Yellow Line");
+	EisenhowerAve2.bindPopup("<b>Eisenhower Ave:<br>East Entrance</b><br>Yellow Line");
+	Huntington1.bindPopup("<b>Huntington:<br>North Entrance</b><br>Yellow Line");
+	Huntington2.bindPopup("<b>Huntington:<br>South Entrance</b><br>Yellow Line");
+	VanDorn1.bindPopup("<b>Van Dorn Street</b><br>Blue Line");
+	Franconia1.bindPopup("<b>Franconia/Springfield:<br>North Entrance</b><br>Blue Line");
+	Franconia2.bindPopup("<b>Franconia/Springfield:<br>South Entrance</b><br>Blue Line");
+	
+	var legend = L.control({position: 'topright'});
+	
+	legend.addTo(dcmap);
+
+legend.addTo(map);
+	
+	</script>
+</body>
+</html>
