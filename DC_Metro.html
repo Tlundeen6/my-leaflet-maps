@@ -9,703 +9,701 @@
     #map {
 		border: 1px solid black;
         width: 100%;
-        height: 677px;
+        height: 679px;
     }
+	
 	body {
-		background-color: "D8D7D7";
+	    background-color: "D8D7D7";
 	}
 	
 	.title {
-		border: 1px solid black;
-		margin left: auto;
-		margin right: auto;
-		width: 100%;
-		background-color: "FFFFFF";
-		text-align: center;
+	    border: 1px solid black;
+	    margin left: auto;
+	    margin right: auto;
+	    width: 100%;
+	    background-color: "FFFFFF";
+	    text-align: center;
+		text-shadow: 1px 1px 4px "#808080";
 	}
 		
 </style>
 </head>
 <body>
 	<div class = "title">
-		<h1 style="color:#DE1919;font-family:Arial">DC Metro Station Entrances</h1>
-		<p style="color:#DE1919;font-family:Arial">Click any icon for attribute information</p>
+	    <h1 style="color:#DE1919;font-family:Arial">DC Metro Station Entrances</h1>
+	    <p style="color:#DE1919;font-family:Arial">Click any icon for attribute information</p>
 	</div>
 	<div>
 	<p> </p>
 	</div>
     <div id="map"></div>
     <script>
-	var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
         });
-          
+        
           var dcmap = L.map('map');
 		  dcmap.setView([38.94, -77.01], 11);
           dcmap.addLayer(layer);
-			  
-	var blackIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/n/K/j/Q/u/d/square-black-crystal-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
+		  
+    var blackIcon = L.icon({
+	    iconUrl: 'http://www.clker.com/cliparts/n/K/j/Q/u/d/square-black-crystal-button-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var blueIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/K/y/e/b/5/7/blue-square-button-th.png',
 	
-	var blueIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/K/y/e/b/5/7/blue-square-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
-	var greenIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/Y/b/n/p/J/M/green-square-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
-	var orangeIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/j/x/1/N/q/M/dark-orange-locked-square-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
-	var redIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/N/A/G/S/5/f/red-square-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
-	var silverIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/o/e/3/K/h/g/626466-50-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
-	var yellowIcon = L.icon({
-		iconUrl: 'http://www.clker.com/cliparts/8/6/m/O/X/y/yellow-square-button-th.png',
-		
-		iconSize:	 [20, 20],
-		iconAnchor:  [5, 5],
-		popupAnchor: [5, 5]
-	});
-	
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var greenIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/Y/b/n/p/J/M/green-square-button-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var orangeIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/j/x/1/N/q/M/dark-orange-locked-square-button-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var redIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/N/A/G/S/5/f/red-square-button-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var silverIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/o/e/3/K/h/g/626466-50-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var yellowIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/8/6/m/O/X/y/yellow-square-button-th.png',
+
+        iconSize:	 [20, 20],
+        iconAnchor:  [5, 5],
+        popupAnchor: [5, 5]
+    });
+
+    var AddisonRd1 = L.marker([38.88672, -76.89569], {icon: blackIcon}).addTo(dcmap);
+    var Anacostia1 = L.marker([38.86216, -76.99543], {icon: greenIcon}).addTo(dcmap);
+	var Archives1 = L.marker([38.89396, -77.02255], {icon: blackIcon}).addTo(dcmap);
+	var ArlingtonCemetary1 = L.marker([38.88460, -77.06362], {icon: blueIcon}).addTo(dcmap);
+    var ArlingtonCemetary2 = L.marker([38.88424, -77.06352], {icon: blueIcon}).addTo(dcmap);
+    var Ballston1 = L.marker([38.88192, -77.11132], {icon: blackIcon}).addTo(dcmap);
+    var BenningRd1 = L.marker([38.89046, -76.93755], {icon: blackIcon}).addTo(dcmap);
+    var Bethesda1 = L.marker([38.98415, -77.09388], {icon: redIcon}).addTo(dcmap);
+	var BraddockRd1 = L.marker([38.81394, -77.05371], {icon: blackIcon}).addTo(dcmap);
+	var BranchAve1 = L.marker([38.82720, -76.91260], {icon: greenIcon}).addTo(dcmap);
+	var Brookland1 = L.marker([38.93379, -76.99444], {icon: redIcon}).addTo(dcmap);
+    var Brookland2 = L.marker([38.93380, -76.99502], {icon: redIcon}).addTo(dcmap);
+	var CapitolHeights1 = L.marker([38.88925, -76.91321], {icon: blackIcon}).addTo(dcmap);
+	var CapitolSouth1 = L.marker([38.88560, -77.00607], {icon: blackIcon}).addTo(dcmap);
+    var Cheverly1 = L.marker([38.91622, -76.91673], {icon: orangeIcon}).addTo(dcmap);
+    var Clarendon1 = L.marker([38.88707, -77.09525], {icon: blackIcon}).addTo(dcmap);
+	var ClevelandPark1 = L.marker([38.93598, -77.05854], {icon: redIcon}).addTo(dcmap);
+    var ClevelandPark2 = L.marker([38.93615, -77.05902], {icon: redIcon}).addTo(dcmap);
+    var CollegePark1 = L.marker([38.97819, -76.92801], {icon: greenIcon}).addTo(dcmap);
+    var CollegePark2 = L.marker([38.97833, -76.92882], {icon: greenIcon}).addTo(dcmap);
+    var ColumbiaHeights1 = L.marker([38.92890, -77.03245], {icon: blackIcon}).addTo(dcmap);
+    var ColumbiaHeights2 = L.marker([38.92861, -77.03301], {icon: blackIcon}).addTo(dcmap);
+    var Courthouse1 = L.marker([38.89126, -77.08498], {icon: blackIcon}).addTo(dcmap);
+    var CongressHeights1 = L.marker([38.84632, -76.98846], {icon: greenIcon}).addTo(dcmap);
+    var CrystalCity1 = L.marker([38.85802, -77.05135], {icon: blackIcon}).addTo(dcmap);
+    var Deanwood1 = L.marker([38.90858, -76.93521], {icon: orangeIcon}).addTo(dcmap);
+    var Deanwood2 = L.marker([38.90826, -76.93473], {icon: orangeIcon}).addTo(dcmap);
+    var DupontCircle1 = L.marker([38.90848, -77.04336], {icon: redIcon}).addTo(dcmap);
+	var DunnLoring1 = L.marker([38.88282, -77.22843], {icon: orangeIcon}).addTo(dcmap);
+    var EasternMarket1 = L.marker([38.88422, -76.99573], {icon: blackIcon}).addTo(dcmap);
+    var EastFallsChurch1 = L.marker([38.88586, -77.15649], {icon: blackIcon}).addTo(dcmap);
+    var EisenhowerAve1 = L.marker([38.80046, -77.07124], {icon: yellowIcon}).addTo(dcmap);
+    var EisenhowerAve2 = L.marker([38.80035, -77.07099], {icon: yellowIcon}).addTo(dcmap);
+    var FarragutWest1 = L.marker([38.90148, -77.04185], {icon: blackIcon}).addTo(dcmap); 
+    var FarragutWest2 = L.marker([38.90121, -77.03918], {icon: blackIcon}).addTo(dcmap); 
+    var FarragutNorth1 = L.marker([38.90280, -77.03924], {icon: redIcon}).addTo(dcmap);
+    var FederalCenter1 = L.marker([38.88489, -77.01539], {icon: blackIcon}).addTo(dcmap);
+	var FederalTriangle1 = L.marker([38.893829, -77.029044], {icon: blackIcon}).addTo(dcmap);
+    var FoggyBottom1 = L.marker([38.90088, -77.05049], {icon: blackIcon}).addTo(dcmap);
+    var ForestGlen1 = L.marker([39.01531, -77.04317], {icon: redIcon}).addTo(dcmap);
+    var FortTotten1 = L.marker([38.95229, -77.00233], {icon: blackIcon}).addTo(dcmap);
+    var Franconia1 = L.marker([38.76708, -77.16938], {icon: blueIcon}).addTo(dcmap);
+    var Franconia2 = L.marker([38.76601, -77.16844], {icon: blueIcon}).addTo(dcmap);
+    var FriendshipHeights1 = L.marker([38.96103, -77.08564], {icon: redIcon}).addTo(dcmap);
+    var FriendshipHeights2 = L.marker([38.96073, -77.08600], {icon: redIcon}).addTo(dcmap);
+    var GalleryPlace1 = L.marker([38.89740, -77.02177], {icon: blackIcon}).addTo(dcmap);
     var	Glenmont1 = L.marker([39.06229, -77.05320], {icon: redIcon}).addTo(dcmap);
-	var	Glenmont2 = L.marker([39.06192, -77.05373], {icon: redIcon}).addTo(dcmap);
-    var Wheaton1 = L.marker([39.03816, -77.05113], {icon: redIcon}).addTo(dcmap);
-	var Wheaton2 = L.marker([39.03864, -77.05021], {icon: redIcon}).addTo(dcmap);
-	var ForestGlen1 = L.marker([39.01531, -77.04317], {icon: redIcon}).addTo(dcmap);
+    var	Glenmont2 = L.marker([39.06192, -77.05373], {icon: redIcon}).addTo(dcmap);
+    var Greenbelt1 = L.marker([39.01104, -76.91104], {icon: greenIcon}).addTo(dcmap);
+	var Greensboro1 = L.marker([38.92108, -77.23318], {icon: silverIcon}).addTo(dcmap); 
+    var Greensboro2 = L.marker([38.92057, -77.23415], {icon: silverIcon}).addTo(dcmap); 
+    var Huntington1 = L.marker([38.79469, -77.07517], {icon: yellowIcon}).addTo(dcmap);
+    var Huntington2 = L.marker([38.79299, -77.07542], {icon: yellowIcon}).addTo(dcmap);
+	var JudiciarySquare1 = L.marker([38.89702, -77.01755], {icon: redIcon}).addTo(dcmap);
+    var Landover1 = L.marker([38.93347, -76.89117], {icon: orangeIcon}).addTo(dcmap);
+    var Largo1 = L.marker([38.90046, -76.84473], {icon: blackIcon}).addTo(dcmap);
+    var LEnfant1 = L.marker([38.88624, -77.02166], {icon: blackIcon}).addTo(dcmap);
+    var McLean1 = L.marker([38.92461, -77.20824], {icon: silverIcon}).addTo(dcmap);
+    var McLean2 = L.marker([38.92485, -77.20958], {icon: silverIcon}).addTo(dcmap);	
+    var McPhersonSq1 = L.marker([38.90122, -77.03219], {icon: blackIcon}).addTo(dcmap); 
+    var McPhersonSq2 = L.marker([38.901165, -77.034870], {icon: blackIcon}).addTo(dcmap); 
+    var MedicalCenter1 = L.marker([38.99908, -77.09779], {icon: redIcon}).addTo(dcmap);
+    var MetroCenter1 = L.marker([38.89822, -77.02948], {icon: blackIcon}).addTo(dcmap);
+    var MinnesotaAve1 = L.marker([38.89920, -76.94728], {icon: orangeIcon}).addTo(dcmap);
+    var MinnesotaAve2 = L.marker([38.89877, -76.94675], {icon: orangeIcon}).addTo(dcmap);
+	var MorganBlvd1 = L.marker([38.89375, -76.86841], {icon: blackIcon}).addTo(dcmap);
+    var MtVernon1 = L.marker([38.90556, -77.02212], {icon: blackIcon}).addTo(dcmap);
+	var NavyYard1 = L.marker([38.87603, -77.00442], {icon: greenIcon}).addTo(dcmap);
+    var NavyYard2 = L.marker([38.87667, -77.00451], {icon: greenIcon}).addTo(dcmap);
+    var NaylorRd1 = L.marker([38.85093, -76.95682], {icon: greenIcon}).addTo(dcmap);
+	var NewCarrollton1 = L.marker([38.94795, -76.87173], {icon: orangeIcon}).addTo(dcmap);
+    var NewCarrollton2 = L.marker([38.94837, -76.87223], {icon: orangeIcon}).addTo(dcmap);
+	var NoMa1 = L.marker([38.90735, -77.00342], {icon: redIcon}).addTo(dcmap);
+	var OldTown1 = L.marker([38.80732, -77.05977], {icon: blackIcon}).addTo(dcmap);
+    var OldTown2 = L.marker([38.80629, -77.06129], {icon: blackIcon}).addTo(dcmap);
+	var Pentagon1 = L.marker([38.86922, -77.05383], {icon: blackIcon}).addTo(dcmap);
+    var PentagonCity1 = L.marker([38.86262, -77.05910], {icon: blackIcon}).addTo(dcmap);
+    var PentagonCity2 = L.marker([38.86268, -77.05988], {icon: blackIcon}).addTo(dcmap);
+	var Petworth1 = L.marker([38.93690, -77.02421], {icon: blackIcon}).addTo(dcmap);
+	var PotomacAve1 = L.marker([38.88082, -76.98519], {icon: blackIcon}).addTo(dcmap);
+    var PrinceGeorges1 = L.marker([38.96529, -76.95594], {icon: greenIcon}).addTo(dcmap);
+	var ReaganNational1 = L.marker([38.85233, -77.04353], {icon: blackIcon}).addTo(dcmap);
+    var ReaganNational2 = L.marker([38.85461, -77.04452], {icon: blackIcon}).addTo(dcmap);
+	var RestonEast1 = L.marker([38.94844, -77.33891], {icon: silverIcon}).addTo(dcmap); 
+    var RestonEast2 = L.marker([38.94694, -77.33990], {icon: silverIcon}).addTo(dcmap);
+	var RhodeIsland1 = L.marker([38.92066, -76.99606], {icon: redIcon}).addTo(dcmap);
+	var Rockville1 = L.marker([39.08464, -77.14625], {icon: redIcon}).addTo(dcmap);
+    var Rockville2 = L.marker([39.08443, -77.14657], {icon: redIcon}).addTo(dcmap);
+    var Rosslyn1 = L.marker([38.89595, -77.07173], {icon: blackIcon}).addTo(dcmap);
+	var ShadyGrove1 = L.marker([39.12032, -77.16461], {icon: redIcon}).addTo(dcmap);
+    var ShadyGrove2 = L.marker([39.11989, -77.16495], {icon: redIcon}).addTo(dcmap);
+	var Shaw1 = L.marker([38.91279, -77.02264], {icon: blackIcon}).addTo(dcmap);
+    var Shaw2 = L.marker([38.91452, -77.02174], {icon: blackIcon}).addTo(dcmap);
 	var SilverSpring1 = L.marker([38.99385, -77.03135], {icon: redIcon}).addTo(dcmap);
     var SilverSpring2 = L.marker([38.99416, -77.03177], {icon: redIcon}).addTo(dcmap);
-	var Takoma1 = L.marker([38.97556, -77.01789], {icon: redIcon}).addTo(dcmap);
-	var Takoma2 = L.marker([38.97501, -77.01757], {icon: redIcon}).addTo(dcmap);
-	var FortTotten1 = L.marker([38.95229, -77.00233], {icon: blackIcon}).addTo(dcmap);
-	var Brookland1 = L.marker([38.93379, -76.99444], {icon: redIcon}).addTo(dcmap);
-	var Brookland2 = L.marker([38.93380, -76.99502], {icon: redIcon}).addTo(dcmap);
-	var RhodeIsland1 = L.marker([38.92066, -76.99606], {icon: redIcon}).addTo(dcmap);
-	var NoMa1 = L.marker([38.90735, -77.00342], {icon: redIcon}).addTo(dcmap);
-	var UnionStation1 = L.marker([38.89754, -77.00551], {icon: redIcon}).addTo(dcmap);
-	var JudiciarySquare1 = L.marker([38.89702, -77.01755], {icon: redIcon}).addTo(dcmap);
-	var GalleryPlace1 = L.marker([38.89740, -77.02177], {icon: blackIcon}).addTo(dcmap);
-	var MetroCenter1 = L.marker([38.89822, -77.02948], {icon: blackIcon}).addTo(dcmap);
-	var FarragutNorth1 = L.marker([38.90280, -77.03924], {icon: redIcon}).addTo(dcmap);
-	var DupontCircle1 = L.marker([38.90848, -77.04336], {icon: redIcon}).addTo(dcmap);
-	var WoodleyPark1 = L.marker([38.92452, -77.05239], {icon: redIcon}).addTo(dcmap);
-	var ClevelandPark1 = L.marker([38.93598, -77.05854], {icon: redIcon}).addTo(dcmap);
-	var ClevelandPark2 = L.marker([38.93615, -77.05902], {icon: redIcon}).addTo(dcmap);
-	var VanNess1 = L.marker([38.94440, -77.06342], {icon: redIcon}).addTo(dcmap);
-	var VanNess2 = L.marker([38.94442, -77.06381], {icon: redIcon}).addTo(dcmap);
-	var Tenleytown1 = L.marker([38.94810, -77.07946], {icon: redIcon}).addTo(dcmap);
-	var Tenleytown2 = L.marker([38.94840, -77.08012], {icon: redIcon}).addTo(dcmap);
-	var FriendshipHeights1 = L.marker([38.96103, -77.08564], {icon: redIcon}).addTo(dcmap);
-	var FriendshipHeights2 = L.marker([38.96073, -77.08600], {icon: redIcon}).addTo(dcmap);
-	var Bethesda1 = L.marker([38.98415, -77.09388], {icon: redIcon}).addTo(dcmap);
-	var MedicalCenter1 = L.marker([38.99908, -77.09779], {icon: redIcon}).addTo(dcmap);
-	var Stathmore1 = L.marker([39.02901, -77.10378], {icon: redIcon}).addTo(dcmap);
-	var WhiteFlint1 = L.marker([39.04737, -77.11268], {icon: redIcon}).addTo(dcmap);
-	var WhiteFlint2 = L.marker([39.04719, -77.11323], {icon: redIcon}).addTo(dcmap);
-	var Twinbrook1 = L.marker([39.06246, -77.12051], {icon: redIcon}).addTo(dcmap);
-	var Twinbrook2 = L.marker([39.06226, -77.12085], {icon: redIcon}).addTo(dcmap);
-	var Rockville1 = L.marker([39.08464, -77.14625], {icon: redIcon}).addTo(dcmap);
-	var Rockville2 = L.marker([39.08443, -77.14657], {icon: redIcon}).addTo(dcmap);
-	var ShadyGrove1 = L.marker([39.12032, -77.16461], {icon: redIcon}).addTo(dcmap);
-	var ShadyGrove2 = L.marker([39.11989, -77.16495], {icon: redIcon}).addTo(dcmap);
-	var Greenbelt1 = L.marker([39.01104, -76.91104], {icon: greenIcon}).addTo(dcmap);
-	var CollegePark1 = L.marker([38.97819, -76.92801], {icon: greenIcon}).addTo(dcmap);
-	var CollegePark2 = L.marker([38.97833, -76.92882], {icon: greenIcon}).addTo(dcmap);
-	var PrinceGeorges1 = L.marker([38.96529, -76.95594], {icon: greenIcon}).addTo(dcmap);
-	var WestHyattsville1 = L.marker([38.95571, -76.96886], {icon: greenIcon}).addTo(dcmap);
-	var Petworth1 = L.marker([38.93690, -77.02421], {icon: blackIcon}).addTo(dcmap);
-	var ColumbiaHeights1 = L.marker([38.92890, -77.03245], {icon: blackIcon}).addTo(dcmap);
-	var ColumbiaHeights2 = L.marker([38.92861, -77.03301], {icon: blackIcon}).addTo(dcmap);
-	var USt1 = L.marker([38.91686, -77.02914], {icon: blackIcon}).addTo(dcmap);
-	var USt2 = L.marker([38.91682, -77.02598], {icon: blackIcon}).addTo(dcmap);
-	var Shaw1 = L.marker([38.91279, -77.02264], {icon: blackIcon}).addTo(dcmap);
-	var Shaw2 = L.marker([38.91452, -77.02174], {icon: blackIcon}).addTo(dcmap);
-	var MtVernon1 = L.marker([38.90556, -77.02212], {icon: blackIcon}).addTo(dcmap);
-	var Archives1 = L.marker([38.89396, -77.02255], {icon: blackIcon}).addTo(dcmap);
-	var LEnfant1 = L.marker([38.88624, -77.02166], {icon: blackIcon}).addTo(dcmap);
-	var Waterfront1 = L.marker([38.87698, -77.01757], {icon: greenIcon}).addTo(dcmap);
-	var NavyYard1 = L.marker([38.87603, -77.00442], {icon: greenIcon}).addTo(dcmap);
-	var NavyYard2 = L.marker([38.87667, -77.00451], {icon: greenIcon}).addTo(dcmap);
-	var Anacostia1 = L.marker([38.86216, -76.99543], {icon: greenIcon}).addTo(dcmap);
-	var CongressHeights1 = L.marker([38.84632, -76.98846], {icon: greenIcon}).addTo(dcmap);
-	var SouthernAve1 = L.marker([38.84046, -76.97582], {icon: greenIcon}).addTo(dcmap);
-	var NaylorRd1 = L.marker([38.85093, -76.95682], {icon: greenIcon}).addTo(dcmap);
+    var Smithsonian1 = L.marker([38.88741, -77.02844], {icon: blackIcon}).addTo(dcmap);
+    var SouthernAve1 = L.marker([38.84046, -76.97582], {icon: greenIcon}).addTo(dcmap);
+    var SpringHill1 = L.marker([38.92925, -77.24090], {icon: silverIcon}).addTo(dcmap);
+    var SpringHill2 = L.marker([38.92843, -77.24186], {icon: silverIcon}).addTo(dcmap);
+    var StadiumArmory1 = L.marker([38.88563, -76.97705], {icon: blackIcon}).addTo(dcmap);
+	var Strathmore1 = L.marker([39.02901, -77.10378], {icon: redIcon}).addTo(dcmap);
 	var Suitland1 = L.marker([38.84421, -76.93235], {icon: greenIcon}).addTo(dcmap);
-	var BranchAve1 = L.marker([38.82720, -76.91260], {icon: greenIcon}).addTo(dcmap);
-	var FederalCenter1 = L.marker([38.88489, -77.01539], {icon: blackIcon}).addTo(dcmap);
-	var CapitolSouth1 = L.marker([38.88560, -77.00607], {icon: blackIcon}).addTo(dcmap);
-	var EasternMarket1 = L.marker([38.88422, -76.99573], {icon: blackIcon}).addTo(dcmap);
-	var PotomacAve1 = L.marker([38.88082, -76.98519], {icon: blackIcon}).addTo(dcmap);
-	var StadiumArmory1 = L.marker([38.88563, -76.97705], {icon: blackIcon}).addTo(dcmap);
-	var MinnesotaAve1 = L.marker([38.89920, -76.94728], {icon: orangeIcon}).addTo(dcmap);
-	var MinnesotaAve2 = L.marker([38.89877, -76.94675], {icon: orangeIcon}).addTo(dcmap);
-	var Deanwood1 = L.marker([38.90858, -76.93521], {icon: orangeIcon}).addTo(dcmap);
-	var Deanwood2 = L.marker([38.90826, -76.93473], {icon: orangeIcon}).addTo(dcmap);
-	var Cheverly1 = L.marker([38.91622, -76.91673], {icon: orangeIcon}).addTo(dcmap);
-	var Landover1 = L.marker([38.93347, -76.89117], {icon: orangeIcon}).addTo(dcmap);
-	var NewCarrollton1 = L.marker([38.94795, -76.87173], {icon: orangeIcon}).addTo(dcmap);
-	var NewCarrollton2 = L.marker([38.94837, -76.87223], {icon: orangeIcon}).addTo(dcmap);
-	var BenningRd1 = L.marker([38.89046, -76.93755], {icon: blackIcon}).addTo(dcmap);
-	var CapitolHeights1 = L.marker([38.88925, -76.91321], {icon: blackIcon}).addTo(dcmap);
-	var AddisonRd1 = L.marker([38.88672, -76.89569], {icon: blackIcon}).addTo(dcmap);
-	var MorganBlvd1 = L.marker([38.89375, -76.86841], {icon: blackIcon}).addTo(dcmap);
-	var Largo1 = L.marker([38.90046, -76.84473], {icon: blackIcon}).addTo(dcmap);
-	var Smithsonian1 = L.marker([38.88741, -77.02844], {icon: blackIcon}).addTo(dcmap);
-	var FederalTriangle1 = L.marker([38.893829, -77.029044], {icon: blackIcon}).addTo(dcmap);
-	var McPhersonSq1 = L.marker([38.90122, -77.03219], {icon: blackIcon}).addTo(dcmap); 
-	var McPhersonSq2 = L.marker([38.901165, -77.034870], {icon: blackIcon}).addTo(dcmap); 
-	var FarragutWest1 = L.marker([38.90148, -77.04185], {icon: blackIcon}).addTo(dcmap); 
-	var FarragutWest2 = L.marker([38.90121, -77.03918], {icon: blackIcon}).addTo(dcmap); 
-	var FoggyBottom1 = L.marker([38.90088, -77.05049], {icon: blackIcon}).addTo(dcmap);
-	var Rosslyn1 = L.marker([38.89595, -77.07173], {icon: blackIcon}).addTo(dcmap);
-	var Courthouse1 = L.marker([38.89126, -77.08498], {icon: blackIcon}).addTo(dcmap);
-	var Clarendon1 = L.marker([38.88707, -77.09525], {icon: blackIcon}).addTo(dcmap);
-	var VirginiaSq1 = L.marker([38.88284, -77.10329], {icon: blackIcon}).addTo(dcmap);
-	var Ballston1 = L.marker([38.88192, -77.11132], {icon: blackIcon}).addTo(dcmap);
-	var EastFallsChurch1 = L.marker([38.88586, -77.15649], {icon: blackIcon}).addTo(dcmap);
-	var WestFallsChurch1 = L.marker([38.90112, -77.18886], {icon: orangeIcon}).addTo(dcmap);
-	var WestFallsChurch2 = L.marker([38.90031, -77.18888], {icon: orangeIcon}).addTo(dcmap);
-	var DunnLoring1 = L.marker([38.88282, -77.22843], {icon: orangeIcon}).addTo(dcmap);
-	var Vienna1 = L.marker([38.87831, -77.27153], {icon: orangeIcon}).addTo(dcmap);
-	var Vienna2 = L.marker([38.87736, -77.27125], {icon: orangeIcon}).addTo(dcmap);
-	var McLean1 = L.marker([38.92461, -77.20824], {icon: silverIcon}).addTo(dcmap);
-    var McLean2 = L.marker([38.92485, -77.20958], {icon: silverIcon}).addTo(dcmap);	
-	var TysonsCorner1 = L.marker([38.92065, -77.22208], {icon: silverIcon}).addTo(dcmap); 
-	var TysonsCorner2 = L.marker([38.91977, -77.22222], {icon: silverIcon}).addTo(dcmap); 
-	var Greensboro1 = L.marker([38.92108, -77.23318], {icon: silverIcon}).addTo(dcmap); 
-	var Greensboro2 = L.marker([38.92057, -77.23415], {icon: silverIcon}).addTo(dcmap); 
-	var SpringHill1 = L.marker([38.92925, -77.24090], {icon: silverIcon}).addTo(dcmap);
-    var SpringHill2 = L.marker([38.92843, -77.24186], {icon: silverIcon}).addTo(dcmap); 	
-	var RestonEast1 = L.marker([38.94844, -77.33891], {icon: silverIcon}).addTo(dcmap); 
-	var RestonEast2 = L.marker([38.94694, -77.33990], {icon: silverIcon}).addTo(dcmap);
-	var ArlingtonCemetary1 = L.marker([38.88460, -77.06362], {icon: blueIcon}).addTo(dcmap);
-	var ArlingtonCemetary2 = L.marker([38.88424, -77.06352], {icon: blueIcon}).addTo(dcmap);
-	var Pentagon1 = L.marker([38.86922, -77.05383], {icon: blackIcon}).addTo(dcmap);
-	var PentagonCity1 = L.marker([38.86262, -77.05910], {icon: blackIcon}).addTo(dcmap);
-	var PentagonCity2 = L.marker([38.86268, -77.05988], {icon: blackIcon}).addTo(dcmap);
-	var CrystalCity1 = L.marker([38.85802, -77.05135], {icon: blackIcon}).addTo(dcmap);
-	var ReaganNational1 = L.marker([38.85233, -77.04353], {icon: blackIcon}).addTo(dcmap);
-	var ReaganNational2 = L.marker([38.85461, -77.04452], {icon: blackIcon}).addTo(dcmap);
-	var BraddockRd1 = L.marker([38.81394, -77.05371], {icon: blackIcon}).addTo(dcmap);
-	var OldTown1 = L.marker([38.80732, -77.05977], {icon: blackIcon}).addTo(dcmap);
-	var OldTown2 = L.marker([38.80629, -77.06129], {icon: blackIcon}).addTo(dcmap);
-	var EisenhowerAve1 = L.marker([38.80046, -77.07124], {icon: yellowIcon}).addTo(dcmap);
-	var EisenhowerAve2 = L.marker([38.80035, -77.07099], {icon: yellowIcon}).addTo(dcmap);
-	var Huntington1 = L.marker([38.79469, -77.07517], {icon: yellowIcon}).addTo(dcmap);
-	var Huntington2 = L.marker([38.79299, -77.07542], {icon: yellowIcon}).addTo(dcmap);
-	var VanDorn1 = L.marker([38.79958, -77.12914], {icon: blueIcon}).addTo(dcmap);
-	var Franconia1 = L.marker([38.76708, -77.16938], {icon: blueIcon}).addTo(dcmap);
-	var Franconia2 = L.marker([38.76601, -77.16844], {icon: blueIcon}).addTo(dcmap);
-	
-	var blueL = "Blue Line";
-	var blueLBreak = "Blue Line<br>";
-	var blueLine = blueL.fontcolor("112EBF");
-	var blueLineBreak = blueLBreak.fontcolor("112EBF");
-	var greenL = "Green Line";
-	var greenLBreak = "Green Line<br>"
-	var greenLine = greenL.fontcolor("179E2F");
-	var greenLineBreak = greenLBreak.fontcolor("179E2F");
-	var orangeL = "Orange Line";
-	var orangeLBreak = "Orange Line<br>";
-	var orangeLine = orangeL.fontcolor("EF9617");
-	var orangeLineBreak = orangeLBreak.fontcolor("EF9617");
-	var redL = "Red Line";
-	var redLBreak = "Red Line<br>";
-	var redLine = redL.fontcolor("E61515");
-	var redLineBreak = redLBreak.fontcolor("E61515");
-	var silverL = "Silver Line";
-	var silverLBreak = "Silver Line<br>";
-	var silverLine = silverL.fontcolor("9E9E9E");
-	var silverLineBreak = silverLBreak.fontcolor("9E9E9E");
-	var yellowL = "Yellow Line";
-	var yellowLine = yellowL.fontcolor("F6DC22");
-	
-	var Glenmont1String = "<b>Glemont:</b><br>East Entrance<br>";
-	var Glenmont1Text = Glenmont1String.concat(redLine);
-	var Glenmont2String = "<b>Glemont:</b><br>West Entrance<br>";
-	var Glenmont2Text = Glenmont2String.concat(redLine);
-	var Wheaton1String = "<b>Wheaton:</b><br>West Entrance<br>";
-	var Wheaton1Text = Wheaton1String.concat(redLine);
-	var Wheaton2String = "<b>Wheaton:</b><br>East Entrance<br>";
-	var Wheaton2Text = Wheaton2String.concat(redLine);
-	var ForestGlen1String = "<b>Forest Glen</b><br>";
-	var ForestGlen1Text = ForestGlen1String.concat(redLine);
-	var SilverSpring1String = "<b>Silver Spring:</b><br>South Entrance<br>";
-	var SilverSpring1Text = SilverSpring1String.concat(redLine);
-	var SilverSpring2String = "<b>Silver Spring:</b><br>North Entrance<br>";
-	var SilverSpring2Text = SilverSpring2String.concat(redLine);
-	var Takoma1String = "<b>Takoma:</b><br>Park and Ride Entrance<br>"
-	var Takoma1Text = Takoma1String.concat(redLine);
-	var Takoma2String = "<b>Takoma:</b><br>Carroll Street Entrance<br>";
-	var Takoma2Text = Takoma2String.concat(redLine);
-	var FortTotten1String1 = "<b>Fort Totten</b><br>";
-	var FortTotten1String2 = FortTotten1String1.concat(greenLineBreak);
-	var FortTotten1String3 = FortTotten1String2.concat(redLineBreak);
-	var FortTotten1Text = FortTotten1String3.concat(yellowLine);
-	var Brookland1String = "<b>Brookland/CUA:</b><br>East Entrance<br>";
-	var Brookland1Text = Brookland1String.concat(redLine);
-	var Brookland2String = "<b>Brookland/CUA:</b><br>West Entrance<br>";
-	var Brookland2Text = Brookland2String.concat(redLine);
-	var RhodeIsland1String = "<b>Rhode Island Ave</b><br>";
-	var RhodeIsland1Text = RhodeIsland1String.concat(redLine);
-	var NoMa1String = "<b>NoMa/Gallaudet U</b><br>";
-	var NoMa1Text = NoMa1String.concat(redLine);
-	var UnionStation1String = "<b>Union Station</b><br>";
-	var UnionStation1Text = UnionStation1String.concat(redLine);
-	var JudiciarySquare1String = "<b>Judiciary Square</b><br>";
-	var JudiciarySquare1Text = JudiciarySquare1String.concat(redLine);
-	var MetroCenter1String1 = "<b>Metro Center</b><br>";
-	var MetroCenter1String2 = MetroCenter1String1.concat(blueLineBreak);
-	var MetroCenter1String3 = MetroCenter1String2.concat(orangeLineBreak);
-	var MetroCenter1String4 = MetroCenter1String3.concat(redLineBreak);
-	var MetroCenter1Text = MetroCenter1String4.concat(silverLine);
-	var FarragutNorth1String = "<b>Farragut North</b><br>";
-	var FarragutNorth1Text = FarragutNorth1String.concat(redLine);
-	var DupontCircle1String = "<b>Dupont Circle</b><br>";
-	var DupontCircle1Text = DupontCircle1String.concat(redLine);
-	var WoodleyPark1String = "<b>Woodley Park</b><br>";
-	var WoodleyPark1Text = WoodleyPark1String.concat(redLine);
-	var ClevelandPark1String = "<b>Cleveland Park:</b><br>East Entrance<br>";
-	var ClevelandPark1Text = ClevelandPark1String.concat(redLine);
-	var ClevelandPark2String = "<b>Cleveland Park:</b><br>West Entrance<br>";
-	var ClevelandPark2Text = ClevelandPark2String.concat(redLine);
-	var VanNess1String = "<b>Van Ness/UDC:</b><br>East Entrance<br>";
-	var VanNess1Text = VanNess1String.concat(redLine);
-	var VanNess2String = "<b>Van Ness/UDC:</b><br>West Entrance<br>";
-	var VanNess2Text = VanNess2String.concat(redLine);
-	var Tenleytown1String = "<b>Tenleytown/AU:</b><br>East Entrance<br>";
-	var Tenleytown1Text = Tenleytown1String.concat(redLine);
-	var Tenleytown2String = "<b>Tenleytown/AU:</b><br>West Entrance<br>";
-	var Tenleytown2Text = Tenleytown2String.concat(redLine);
-	var FriendshipHeights1String = "<b>Friendship Heights:</b><br>East Entrance<br>";
-	var FriendshipHeights1Text = FriendshipHeights1String.concat(redLine);
-	var FriendshipHeights2String = "<b>Friendship Heights:</b><br>West Entrance<br>";
-	var FriendshipHeights2Text = FriendshipHeights2String.concat(redLine);
-	var Bethesda1String = "<b>Bethesda</b><br>";
-	var Bethesda1Text = Bethesda1String.concat(redLine);
-	var MedicalCenter1String = "<b>Medical Center</b><br>";
-	var MedicalCenter1Text = MedicalCenter1String.concat(redLine);
-	var Strathmore1String = "<b>Grosvenor/Strathmore</b><br>";
-	var Strathmore1Text = Strathmore1String.concat(redLine);
-	var WhiteFlint1String = "<b>White Flint:</b><br>East Entrance<br>";
-	var WhiteFlint1Text = WhiteFlint1String.concat(redLine);
-	var WhiteFlint2String = "<b>White Flint:</b><br>West Entrance<br>";
-	var WhiteFlint2Text = WhiteFlint2String.concat(redLine);
-	var Twinbrook1String = "<b>Twinbrook:</b><br>East Entrance<br>";
-	var Twinbrook1Text = Twinbrook1String.concat(redLine);
-	var Twinbrook2String = "<b>Twinbrook:</b><br>West Entrance<br>";
-	var Twinbrook2Text = Twinbrook2String.concat(redLine);
-	var Rockville1String = "<b>Rockville:</b><br>East Entrance<br>";
-	var Rockville1Text = Rockville1String.concat(redLine);
-	var Rockville2String = "<b>Rockville:</b><br>West Entrance<br>";
-	var Rockville2Text = Rockville2String.concat(redLine);
-	var ShadyGrove1String = "<b>Shady Grove:</b><br>East Entrance<br>";
-	var ShadyGrove1Text = ShadyGrove1String.concat(redLine);
-	var ShadyGrove2String = "<b>Shady Grove:</b><br>West Entrance<br>";
-	var ShadyGrove2Text = ShadyGrove2String.concat(redLine);
-	var Greenbelt1String = "<b>Greenbelt</b><br>";
-	var Greenbelt1Text = Greenbelt1String.concat(greenLine);
-	var CollegePark1String = "<b>College Park/University of Maryland:</b><br>East Entrance<br>";
-	var CollegePark1Text = CollegePark1String.concat(greenLine);
-	var CollegePark2String = "<b>College Park/University of Maryland:</b><br>West Entrance<br>";
-	var CollegePark2Text = CollegePark1String.concat(greenLine);
-	var PrinceGeorges1String = "<b>Prince George's Plaza</b><br>";
-	var PrinceGeorges1Text = PrinceGeorges1String.concat(greenLine);
-	var WestHyattsville1String = "<b>West Hyattsville</b><br>";
-	var WestHyattsville1Text = WestHyattsville1String.concat(greenLine);
-	var Petworth1String1 = "<b>Georgia Ave/Petworth</b><br>";
+    var Takoma1 = L.marker([38.97556, -77.01789], {icon: redIcon}).addTo(dcmap);
+    var Takoma2 = L.marker([38.97501, -77.01757], {icon: redIcon}).addTo(dcmap);
+    var Tenleytown1 = L.marker([38.94810, -77.07946], {icon: redIcon}).addTo(dcmap);
+    var Tenleytown2 = L.marker([38.94840, -77.08012], {icon: redIcon}).addTo(dcmap);
+    var Twinbrook1 = L.marker([39.06246, -77.12051], {icon: redIcon}).addTo(dcmap);
+    var Twinbrook2 = L.marker([39.06226, -77.12085], {icon: redIcon}).addTo(dcmap);
+    var TysonsCorner1 = L.marker([38.92065, -77.22208], {icon: silverIcon}).addTo(dcmap); 
+    var TysonsCorner2 = L.marker([38.91977, -77.22222], {icon: silverIcon}).addTo(dcmap); 
+    var UnionStation1 = L.marker([38.89754, -77.00551], {icon: redIcon}).addTo(dcmap);
+    var USt1 = L.marker([38.91686, -77.02914], {icon: blackIcon}).addTo(dcmap);
+    var USt2 = L.marker([38.91682, -77.02598], {icon: blackIcon}).addTo(dcmap);
+    var VanDorn1 = L.marker([38.79958, -77.12914], {icon: blueIcon}).addTo(dcmap);
+    var VanNess1 = L.marker([38.94440, -77.06342], {icon: redIcon}).addTo(dcmap);
+    var VanNess2 = L.marker([38.94442, -77.06381], {icon: redIcon}).addTo(dcmap);
+    var Vienna1 = L.marker([38.87831, -77.27153], {icon: orangeIcon}).addTo(dcmap);
+    var Vienna2 = L.marker([38.87736, -77.27125], {icon: orangeIcon}).addTo(dcmap);
+    var VirginiaSq1 = L.marker([38.88284, -77.10329], {icon: blackIcon}).addTo(dcmap);
+    var Waterfront1 = L.marker([38.87698, -77.01757], {icon: greenIcon}).addTo(dcmap); 
+    var WestFallsChurch1 = L.marker([38.90112, -77.18886], {icon: orangeIcon}).addTo(dcmap);
+    var WestFallsChurch2 = L.marker([38.90031, -77.18888], {icon: orangeIcon}).addTo(dcmap);
+    var WestHyattsville1 = L.marker([38.95571, -76.96886], {icon: greenIcon}).addTo(dcmap);
+    var Wheaton1 = L.marker([39.03816, -77.05113], {icon: redIcon}).addTo(dcmap);
+    var Wheaton2 = L.marker([39.03864, -77.05021], {icon: redIcon}).addTo(dcmap); 
+    var WhiteFlint1 = L.marker([39.04737, -77.11268], {icon: redIcon}).addTo(dcmap);
+    var WhiteFlint2 = L.marker([39.04719, -77.11323], {icon: redIcon}).addTo(dcmap);
+    var WoodleyPark1 = L.marker([38.92452, -77.05239], {icon: redIcon}).addTo(dcmap);
+   
+    var blueL = "Blue Line";
+    var blueLBreak = "Blue Line<br>";
+    var blueLine = blueL.fontcolor("112EBF");
+    var blueLineBreak = blueLBreak.fontcolor("112EBF");
+    var greenL = "Green Line";
+    var greenLBreak = "Green Line<br>"
+    var greenLine = greenL.fontcolor("179E2F");
+    var greenLineBreak = greenLBreak.fontcolor("179E2F");
+    var orangeL = "Orange Line";
+    var orangeLBreak = "Orange Line<br>";
+    var orangeLine = orangeL.fontcolor("EF9617");
+    var orangeLineBreak = orangeLBreak.fontcolor("EF9617");
+    var redL = "Red Line";
+    var redLBreak = "Red Line<br>";
+    var redLine = redL.fontcolor("E61515");
+    var redLineBreak = redLBreak.fontcolor("E61515");
+    var silverL = "Silver Line";
+    var silverLBreak = "Silver Line<br>";
+    var silverLine = silverL.fontcolor("9E9E9E");
+    var silverLineBreak = silverLBreak.fontcolor("9E9E9E");
+    var yellowL = "Yellow Line";
+    var yellowLine = yellowL.fontcolor("F6DC22");
+
+    var AddisonRd1String1 = "<b>Addison Road</b><br>";
+    var AddisonRd1String2 = AddisonRd1String1.concat(blueLineBreak);
+    var AddisonRd1Text = AddisonRd1String2.concat(silverLine);
+    var Anacostia1String = "<b>Anacostia</b><br>";
+    var Anacostia1Text = Anacostia1String.concat(greenLine);
+    var Archives1String1 = "<b>Archives</b><br>";
+    var Archives1String2 = Archives1String1.concat(greenLineBreak);
+    var Archives1Text = Archives1String2.concat(yellowLine);
+    var ArlingtonCemetary1Script = "<b>Arlington Cemetery:</b><br>North Entrance<br>";
+    var ArlingtonCemetary1Text = ArlingtonCemetary1Script.concat(blueLine);
+    var ArlingtonCemetary2Script = "<b>Arlington Cemetery:</b><br>South Entrance<br>";
+    var ArlingtonCemetary2Text = ArlingtonCemetary2Script.concat(blueLine);
+    var Ballston1String1 = "<b>Ballston/MU</b><br>";
+    var Ballston1String2 = Ballston1String1.concat(orangeLineBreak);
+    var Ballston1Text = Ballston1String2.concat(silverLine);
+    var BenningRd1String1 = "<b>Benning Road</b><br>";
+    var BenningRd1String2 = BenningRd1String1.concat(blueLineBreak);
+    var BenningRd1Text = BenningRd1String2.concat(silverLine);
+    var Bethesda1String = "<b>Bethesda</b><br>";
+    var Bethesda1Text = Bethesda1String.concat(redLine);
+    var BraddockRd1Script1 = "<b>Braddock Road</b><br>";
+    var BraddockRd1Script2 = BraddockRd1Script1.concat(blueLineBreak);
+    var BraddockRd1Text = BraddockRd1Script2.concat(yellowLine);
+    var BranchAve1String = "<b>Branch Ave</b><br>";
+    var BranchAve1Text = BranchAve1String.concat(greenLine);
+    var Brookland1String = "<b>Brookland/CUA:</b><br>East Entrance<br>";
+    var Brookland1Text = Brookland1String.concat(redLine);
+    var Brookland2String = "<b>Brookland/CUA:</b><br>West Entrance<br>";
+    var Brookland2Text = Brookland2String.concat(redLine);
+    var CapitolHeights1String1 = "<b>Capitol Heights</b><br>";
+    var CapitolHeights1String2 = CapitolHeights1String1.concat(blueLineBreak);
+    var CapitolHeights1Text = CapitolHeights1String2.concat(silverLine);
+    var CapitolSouth1String1 = "<b>Capitol South</b><br>";
+    var CapitolSouth1String2 = CapitolSouth1String1.concat(blueLineBreak);
+    var CapitolSouth1String3 = CapitolSouth1String2.concat(orangeLineBreak);
+    var CapitolSouth1Text = CapitolSouth1String3.concat(silverLine);
+    var Cheverly1String = "<b>Cheverly</b><br>";
+    var Cheverly1Text = Cheverly1String.concat(orangeLine);
+    var Clarendon1String1 = "<b>Clarendon</b><br>";
+    var Clarendon1String2 = Clarendon1String1.concat(orangeLineBreak);
+    var Clarendon1Text = Clarendon1String2.concat(silverLine);
+    var ClevelandPark1String = "<b>Cleveland Park:</b><br>East Entrance<br>";
+    var ClevelandPark1Text = ClevelandPark1String.concat(redLine);
+    var ClevelandPark2String = "<b>Cleveland Park:</b><br>West Entrance<br>";
+    var ClevelandPark2Text = ClevelandPark2String.concat(redLine);
+    var CollegePark1String = "<b>College Park/University of Maryland:</b><br>East Entrance<br>";
+    var CollegePark1Text = CollegePark1String.concat(greenLine);
+    var CollegePark2String = "<b>College Park/University of Maryland:</b><br>West Entrance<br>";
+    var CollegePark2Text = CollegePark1String.concat(greenLine);
+    var ColumbiaHeights1String1 = "<b>Columbia Heights:</b><br>East Entrance<br>";
+    var ColumbiaHeights1String2 = ColumbiaHeights1String1.concat(greenLineBreak);
+    var ColumbiaHeights1Text = ColumbiaHeights1String2.concat(yellowLine);
+    var ColumbiaHeights2String1 = "<b>Columbia Heights:</b><br>West Entrance<br>";
+    var ColumbiaHeights2String2 = ColumbiaHeights1String1.concat(greenLineBreak);
+    var ColumbiaHeights2Text = ColumbiaHeights2String2.concat(yellowLine);
+    var CongressHeights1String = "<b>Congress Heights</b><br>";
+    var CongressHeights1Text = CongressHeights1String.concat(greenLine);
+    var Courthouse1String1 = "<b>Court House</b><br>";
+    var Courthouse1String2 = Courthouse1String1.concat(orangeLineBreak);
+    var Courthouse1Text = Courthouse1String2.concat(silverLine);
+    var CrystalCity1Script1 = "<b>Crystal City</b><br>";
+    var CrystalCity1Script2 = CrystalCity1Script1.concat(blueLineBreak);
+    var CrystalCity1Text = CrystalCity1Script2.concat(yellowLine);
+    var Deanwood1String = "<b>Deanwood:</b><br>Polk Ave Entrance<br>";
+    var Deanwood1Text = Deanwood1String.concat(orangeLine);
+    var Deanwood2String = "<b>Deanwood:</b><br>Minnesota Ave Entrance<br>";
+    var Deanwood2Text = Deanwood2String.concat(orangeLine);
+    var DunnLoring1String = "<b>Dunn Loring</b><br>";
+    var DunnLoring1Text = DunnLoring1String.concat(orangeLine);
+    var DupontCircle1String = "<b>Dupont Circle</b><br>";
+    var DupontCircle1Text = DupontCircle1String.concat(redLine);
+    var EasternMarket1String1 = "<b>Eastern Market</b><br>";
+    var EasternMarket1String2 = EasternMarket1String1.concat(blueLineBreak);
+    var EasternMarket1String3 = EasternMarket1String2.concat(orangeLineBreak);
+    var EasternMarket1Text = EasternMarket1String3.concat(silverLine);
+    var EastFallsChurch1String1 = "<b>East Falls Church</b><br>";
+    var EastFallsChurch1String2 = EastFallsChurch1String1.concat(orangeLineBreak);
+    var EastFallsChurch1Text = EastFallsChurch1String2.concat(silverLine);
+    var EisenhowerAve1Script = "<b>Eisenhower Ave:</b><br>West Entrance<br>";
+    var EisenhowerAve1Text = EisenhowerAve1Script.concat(yellowLine);
+    var EisenhowerAve2Script = "<b>Eisenhower Ave:</b><br>East Entrance<br>";
+    var EisenhowerAve2Text = EisenhowerAve2Script.concat(yellowLine);
+    var FarragutNorth1String = "<b>Farragut North</b><br>";
+    var FarragutNorth1Text = FarragutNorth1String.concat(redLine);
+    var FarragutWest1String1 = "<b>Farragut West:</b><br>18th and I Entrance<br>";
+    var FarragutWest1String2 = FarragutWest1String1.concat(blueLineBreak);
+    var FarragutWest1String3 = FarragutWest1String2.concat(orangeLineBreak);
+    var FarragutWest1Text = FarragutWest1String3.concat(silverLine);
+    var FarragutWest2String1 = "<b>Farragut West:</b><br>17th and I Entrance<br>";
+    var FarragutWest2String2 = FarragutWest2String1.concat(blueLineBreak);
+    var FarragutWest2String3 = FarragutWest2String2.concat(orangeLineBreak);
+    var FarragutWest2Text = FarragutWest2String3.concat(silverLine);
+    var FederalCenter1String1 = "<b>Federal Center SW</b><br>";
+    var FederalCenter1String2 = FederalCenter1String1.concat(blueLineBreak);
+    var FederalCenter1String3 = FederalCenter1String2.concat(orangeLineBreak);
+    var FederalCenter1Text = FederalCenter1String3.concat(silverLine);
+    var FederalTriangle1String1 = "<b>Federal Triangle</b><br>";
+    var FederalTriangle1String2 = FederalTriangle1String1.concat(blueLineBreak);
+    var FederalTriangle1String3 = FederalTriangle1String2.concat(orangeLineBreak);
+    var FederalTriangle1Text = FederalTriangle1String3.concat(silverLine);
+    var FoggyBottom1String1 = "<b>Foggy Bottom</b><br>";
+    var FoggyBottom1String2 = FoggyBottom1String1.concat(blueLineBreak);
+    var FoggyBottom1String3 = FoggyBottom1String2.concat(orangeLineBreak);
+    var FoggyBottom1Text = FoggyBottom1String3.concat(silverLine);
+    var ForestGlen1String = "<b>Forest Glen</b><br>";
+    var ForestGlen1Text = ForestGlen1String.concat(redLine);
+    var FortTotten1String1 = "<b>Fort Totten</b><br>";
+    var FortTotten1String2 = FortTotten1String1.concat(greenLineBreak);
+    var FortTotten1String3 = FortTotten1String2.concat(redLineBreak);
+    var FortTotten1Text = FortTotten1String3.concat(yellowLine);
+    var Franconia1Script = "<b>Franconia/Springfield:</b><br>North Entrance<br>"
+    var Franconia1Text = Franconia1Script.concat(blueLine);
+    var Franconia2Script = "<b>Franconia/Springfield:</b><br>South Entrance<br>"
+    var Franconia2Text = Franconia2Script.concat(blueLine);
+    var FriendshipHeights1String = "<b>Friendship Heights:</b><br>East Entrance<br>";
+    var FriendshipHeights1Text = FriendshipHeights1String.concat(redLine);
+    var FriendshipHeights2String = "<b>Friendship Heights:</b><br>West Entrance<br>";
+    var FriendshipHeights2Text = FriendshipHeights2String.concat(redLine);
+    var GalleryPlace1String1 = "<b>Gallery Place</b><br>";
+    var GalleryPlace1String2 = GalleryPlace1String1.concat(greenLineBreak);
+    var GalleryPlace1String3 = GalleryPlace1String2.concat(redLineBreak);
+    var GalleryPlace1Text = GalleryPlace1String3.concat(yellowLine);
+    var Glenmont1String = "<b>Glemont:</b><br>East Entrance<br>";
+    var Glenmont1Text = Glenmont1String.concat(redLine);
+    var Glenmont2String = "<b>Glemont:</b><br>West Entrance<br>";
+    var Glenmont2Text = Glenmont2String.concat(redLine);
+    var Greenbelt1String = "<b>Greenbelt</b><br>";
+    var Greenbelt1Text = Greenbelt1String.concat(greenLine);
+    var Greensboro1String = "<b>Greensboro:</b><br>North Entrance<br>";
+    var Greensboro1Text = Greensboro1String.concat(silverLine);
+    var Greensboro2String = "<b>Greensboro:</b><br>South Entrance<br>";
+    var Greensboro2Text = Greensboro2String.concat(silverLine);
+    var Huntington1Script = "<b>Huntingdon:</b><br>North Entrance<br>";
+    var Huntington1Text = Huntington1Script.concat(yellowLine);
+    var Huntington2Script = "<b>Huntingdon:</b><br>South Entrance<br>";
+    var Huntington2Text = Huntington2Script.concat(yellowLine);
+    var JudiciarySquare1String = "<b>Judiciary Square</b><br>";
+    var JudiciarySquare1Text = JudiciarySquare1String.concat(redLine);
+    var Landover1String = "<b>Landover</b><br>";
+    var Landover1Text = Landover1String.concat(orangeLine);
+    var Largo1String1 = "<b>Largo Town Center</b><br>";
+    var Largo1String2 = Largo1String1.concat(blueLineBreak);
+    var Largo1Text = Largo1String2.concat(silverLine);
+    var LEnfant1String1 = "<b>L'Enfant Plaza</b><br>";
+    var LEnfant1String2 = LEnfant1String1.concat(blueLineBreak);
+    var LEnfant1String3 = LEnfant1String2.concat(greenLineBreak);
+    var LEnfant1String4 = LEnfant1String3.concat(orangeLineBreak);
+    var LEnfant1String5 = LEnfant1String4.concat(silverLineBreak);
+    var LEnfant1Text = LEnfant1String5.concat(yellowLine);
+    var McLean1String = "<b>McLean:</b><br>Colshire Drive Entrance<br>";
+    var McLean1Text = McLean1String.concat(silverLine);
+    var McLean2String = "<b>McLean:</b><br>Main Entrance<br>";
+    var McLean2Text = McLean2String.concat(silverLine);
+    var McPhersonSq1String1 = "<b>McPherson Square:</b><br> 14th and I Entrance<br>";
+    var McPhersonSq1String2 = McPhersonSq1String1.concat(blueLineBreak);
+    var McPhersonSq1String3 = McPhersonSq1String2.concat(orangeLineBreak);
+    var McPhersonSq1Text = McPhersonSq1String3.concat(silverLine);
+    var McPhersonSq2String1 = "<b>McPherson Square</b><br> Vermont and I Entrance<br>";
+    var McPhersonSq2String2 = McPhersonSq2String1.concat(blueLineBreak);
+    var McPhersonSq2String3 = McPhersonSq2String2.concat(orangeLineBreak);
+    var McPhersonSq2Text = McPhersonSq2String3.concat(silverLine);
+    var MedicalCenter1String = "<b>Medical Center</b><br>";
+    var MedicalCenter1Text = MedicalCenter1String.concat(redLine);
+    var MetroCenter1String1 = "<b>Metro Center</b><br>";
+    var MetroCenter1String2 = MetroCenter1String1.concat(blueLineBreak);
+    var MetroCenter1String3 = MetroCenter1String2.concat(orangeLineBreak);
+    var MetroCenter1String4 = MetroCenter1String3.concat(redLineBreak);
+    var MetroCenter1Text = MetroCenter1String4.concat(silverLine);
+    var MinnesotaAve1String = "<b>Minnesota Ave:</b><br>North Entrance<br>";
+    var MinnesotaAve1Text = MinnesotaAve1String.concat(orangeLine);
+    var MinnesotaAve2String = "<b>Minnesota Ave:</b><br>South Entrance<br>";
+    var MinnesotaAve2Text = MinnesotaAve2String.concat(orangeLine);
+    var MorganBlvd1String1 = "<b>Morgan Blvd</b><br>";
+    var MorganBlvd1String2 = MorganBlvd1String1.concat(blueLineBreak);
+    var MorganBlvd1Text = MorganBlvd1String2.concat(silverLine);
+    var MtVernon1String1 = "<b>Mount Vernon Square:</b><br>";
+    var MtVernon1String2 = MtVernon1String1.concat(greenLineBreak);
+    var MtVernon1Text = MtVernon1String2.concat(yellowLine);
+    var NavyYard1String = "<b>Navy Yard/Ballpark:</b><br>South Entrance<br>";
+    var NavyYard1Text = NavyYard1String.concat(greenLine);
+    var NavyYard2String = "<b>Navy Yard/Ballpark:</b><br>North Entrance<br>";
+    var NavyYard2Text = NavyYard2String.concat(greenLine); 
+    var NaylorRd1String = "<b>Southern Ave</b><br>";
+    var NaylorRd1Text = NaylorRd1String.concat(greenLine);
+    var NewCarrollton1String = "<b>New Carollton:</b><br>Garden City Drive Entrance<br>";
+    var NewCarrollton1Text = NewCarrollton1String.concat(orangeLine);
+    var NewCarrollton2String = "<b>New Carollton:</b><br>Ellin Road Entrance<br>";
+    var NewCarrollton2Text = NewCarrollton2String.concat(orangeLine);
+    var NoMa1String = "<b>NoMa/Gallaudet U</b><br>";
+    var NoMa1Text = NoMa1String.concat(redLine);
+    var OldTown1Script1 = "<b>King Street/Old Town:</b><br>North Entrance<br>";
+    var OldTown1Script2 = OldTown1Script1.concat(blueLineBreak);
+    var OldTown1Text = OldTown1Script2.concat(yellowLine);
+    var OldTown2Script1 = "<b>King Street/Old Town:</b><br>South Entrance<br>";
+    var OldTown2Script2 = OldTown2Script1.concat(blueLineBreak);
+    var OldTown2Text = OldTown2Script2.concat(yellowLine);
+    var Pentagon1Script1 = "<b>Pentagon</b><br>";
+    var Pentagon1Script2 = Pentagon1Script1.concat(blueLineBreak);
+    var Pentagon1Text = Pentagon1Script2.concat(yellowLine);
+    var PentagonCity1Script1 = "<b>Pentagon City:</b><br>East Entrance<br>";
+    var PentagonCity1Script2 = PentagonCity1Script1.concat(blueLineBreak);
+    var PentagonCity1Text = PentagonCity1Script2.concat(yellowLine);
+    var PentagonCity2Script1 = "<b>Pentagon City:</b><br>West Entrance<br>";
+    var PentagonCity2Script2 = PentagonCity2Script1.concat(blueLineBreak);
+    var PentagonCity2Text = PentagonCity2Script2.concat(yellowLine);
+    var Petworth1String1 = "<b>Georgia Ave/Petworth</b><br>";
     var Petworth1String2 = Petworth1String1.concat(greenLineBreak);
     var Petworth1Text = Petworth1String2.concat(yellowLine);
-	var ColumbiaHeights1String1 = "<b>Columbia Heights:</b><br>East Entrance<br>";
-	var ColumbiaHeights1String2 = ColumbiaHeights1String1.concat(greenLineBreak);
-	var ColumbiaHeights1Text = ColumbiaHeights1String2.concat(yellowLine);
-	var ColumbiaHeights2String1 = "<b>Columbia Heights:</b><br>West Entrance<br>";
-	var ColumbiaHeights2String2 = ColumbiaHeights1String1.concat(greenLineBreak);
-	var ColumbiaHeights2Text = ColumbiaHeights2String2.concat(yellowLine);
+    var PotomacAve1String1 = "<b>Potomac Ave</b><br>";
+    var PotomacAve1String2 = PotomacAve1String1.concat(blueLineBreak);
+    var PotomacAve1String3 = PotomacAve1String2.concat(orangeLineBreak);
+    var PotomacAve1Text = PotomacAve1String3.concat(silverLine);
+    var PrinceGeorges1String = "<b>Prince George's Plaza</b><br>";
+    var PrinceGeorges1Text = PrinceGeorges1String.concat(greenLine);
+    var ReaganNational1Script1 = "<b>Ronald Reagan Washington National Airport:</b><br>South Entrance<br>"
+    var ReaganNational1Script2 = ReaganNational1Script1.concat(blueLineBreak);
+    var ReaganNational1Text = ReaganNational1Script2.concat(yellowLine);
+    var ReaganNational2Script1 = "<b>Ronald Reagan Washington National Airport:</b><br>North Entrance<br>"
+    var ReaganNational2Script2 = ReaganNational2Script1.concat(blueLineBreak);
+    var ReaganNational2Text = ReaganNational2Script2.concat(yellowLine);
+    var RestonEast1String = "<b>Reston East:</b><br>North Entrance<br>";
+    var RestonEast1Text = RestonEast1String.concat(silverLine);
+    var RestonEast2String = "<b>Reston East:</b><br>South Entrance<br>";
+    var RestonEast2Text = RestonEast2String.concat(silverLine);
+    var RhodeIsland1String = "<b>Rhode Island Ave</b><br>";
+    var RhodeIsland1Text = RhodeIsland1String.concat(redLine);
+    var Rockville1String = "<b>Rockville:</b><br>East Entrance<br>";
+    var Rockville1Text = Rockville1String.concat(redLine);
+    var Rockville2String = "<b>Rockville:</b><br>West Entrance<br>";
+    var Rockville2Text = Rockville2String.concat(redLine);
+    var Rosslyn1String1 = "<b>Rosslyn</b><br>";
+    var Rosslyn1String2 = Rosslyn1String1.concat(blueLineBreak);
+    var Rosslyn1String3 = Rosslyn1String2.concat(orangeLineBreak);
+    var Rosslyn1Text = Rosslyn1String3.concat(silverLine);
+    var ShadyGrove1String = "<b>Shady Grove:</b><br>East Entrance<br>";
+    var ShadyGrove1Text = ShadyGrove1String.concat(redLine);
+    var ShadyGrove2String = "<b>Shady Grove:</b><br>West Entrance<br>";
+    var ShadyGrove2Text = ShadyGrove2String.concat(redLine);
+    var Shaw1String1 = "<b>Shaw/Howard U:</b><br>8th and R Entrance<br>";
+    var Shaw1String2 = Shaw1String1.concat(greenLineBreak);
+    var Shaw1Text = Shaw1String2.concat(yellowLine);
+    var Shaw2String1 = "<b>Shaw/Howard U:</b><br>7th and S Entrance<br>";
+    var Shaw2String2 = Shaw2String1.concat(greenLineBreak);
+    var Shaw2Text = Shaw2String2.concat(yellowLine);
+    var SilverSpring1String = "<b>Silver Spring:</b><br>South Entrance<br>";
+    var SilverSpring1Text = SilverSpring1String.concat(redLine);
+    var SilverSpring2String = "<b>Silver Spring:</b><br>North Entrance<br>";
+    var SilverSpring2Text = SilverSpring2String.concat(redLine);
+    var Smithsonian1String1 = "<b>Smithsonian</b><br>";
+    var Smithsonian1String2 = Smithsonian1String1.concat(blueLineBreak);
+    var Smithsonian1String3 = Smithsonian1String2.concat(orangeLineBreak);
+    var Smithsonian1Text = Smithsonian1String3.concat(silverLine);
+    var SouthernAve1String = "<b>Southern Ave</b><br>";
+    var SouthernAve1Text = SouthernAve1String.concat(greenLine);
+    var SpringHill1String = "<b>Spring Hill:</b><br>North Entrance<br>";
+    var SpringHill1Text = SpringHill1String.concat(silverLine);
+    var SpringHill2String = "<b>Spring Hill:</b><br>South Entrance<br>";
+    var SpringHill2Text = SpringHill2String.concat(silverLine);
+    var StadiumArmory1String1 = "<b>Stadium-Armory</b><br>";
+    var StadiumArmory1String2 = StadiumArmory1String1.concat(blueLineBreak);
+    var StadiumArmory1String3 = StadiumArmory1String2.concat(orangeLineBreak);
+    var StadiumArmory1Text = StadiumArmory1String3.concat(silverLine);
+    var Strathmore1String = "<b>Grosvenor/Strathmore</b><br>";
+    var Strathmore1Text = Strathmore1String.concat(redLine);
+    var Suitland1String = "<b>Suitland</b><br>";
+    var Suitland1Text = Suitland1String.concat(greenLine);
+	var Takoma1String = "<b>Takoma:</b><br>Park and Ride Entrance<br>"
+    var Takoma1Text = Takoma1String.concat(redLine);
+    var Takoma2String = "<b>Takoma:</b><br>Carroll Street Entrance<br>";
+    var Takoma2Text = Takoma2String.concat(redLine);
+    var Tenleytown1String = "<b>Tenleytown/AU:</b><br>East Entrance<br>";
+    var Tenleytown1Text = Tenleytown1String.concat(redLine);
+    var Tenleytown2String = "<b>Tenleytown/AU:</b><br>West Entrance<br>";
+    var Tenleytown2Text = Tenleytown2String.concat(redLine);
+    var Twinbrook1String = "<b>Twinbrook:</b><br>East Entrance<br>";
+    var Twinbrook1Text = Twinbrook1String.concat(redLine);
+    var Twinbrook2String = "<b>Twinbrook:</b><br>West Entrance<br>";
+    var Twinbrook2Text = Twinbrook2String.concat(redLine);
+    var TysonsCorner1String = "<b>Tysons Corner:</b><br>North Entrance<br>";
+    var TysonsCorner1Text = TysonsCorner1String.concat(silverLine);
+    var TysonsCorner2String = "<b>McLean:</b><br>South Entrance<br>";
+    var TysonsCorner2Text = TysonsCorner2String.concat(silverLine);
+	var UnionStation1String = "<b>Union Station</b><br>";
+    var UnionStation1Text = UnionStation1String.concat(redLine);
 	var USt1String1 = "<b>U Street:</b><br> 13th and U Entrance<br>";
-	var USt1String2 = USt1String1.concat(greenLineBreak);
-	var USt1Text = USt1String2.concat(yellowLine);
-	var USt2String1 = "<b>U Street:</b><br> 10th and U Entrance<br>";
-	var USt2String2 = USt2String1.concat(greenLineBreak);
-	var USt2Text = USt2String2.concat(yellowLine);
-	var Shaw1String1 = "<b>Shaw/Howard U:</b><br>8th and R Entrance<br>";
-	var Shaw1String2 = Shaw1String1.concat(greenLineBreak);
-	var Shaw1Text = Shaw1String2.concat(yellowLine);
-	var Shaw2String1 = "<b>Shaw/Howard U:</b><br>7th and S Entrance<br>";
-	var Shaw2String2 = Shaw2String1.concat(greenLineBreak);
-	var Shaw2Text = Shaw2String2.concat(yellowLine);
-	var MtVernon1String1 = "<b>Mount Vernon Square:</b><br>";
-	var MtVernon1String2 = MtVernon1String1.concat(greenLineBreak);
-	var MtVernon1Text = MtVernon1String2.concat(yellowLine);
-	var GalleryPlace1String1 = "<b>Gallery Place</b><br>";
-	var GalleryPlace1String2 = GalleryPlace1String1.concat(greenLineBreak);
-	var GalleryPlace1String3 = GalleryPlace1String2.concat(redLineBreak);
-	var GalleryPlace1Text = GalleryPlace1String3.concat(yellowLine);
-	var Archives1String1 = "<b>Archives</b><br>";
-	var Archives1String2 = Archives1String1.concat(greenLineBreak);
-	var Archives1Text = Archives1String2.concat(yellowLine);
-	var LEnfant1String1 = "<b>L'Enfant Plaza</b><br>";
-	var LEnfant1String2 = LEnfant1String1.concat(blueLineBreak);
-	var LEnfant1String3 = LEnfant1String2.concat(greenLineBreak);
-	var LEnfant1String4 = LEnfant1String3.concat(orangeLineBreak);
-	var LEnfant1String5 = LEnfant1String4.concat(silverLineBreak);
-	var LEnfant1Text = LEnfant1String5.concat(yellowLine);
-	var Waterfront1String = "<b>Waterfront</b><br>";
-	var Waterfront1Text = Waterfront1String.concat(greenLine);
-	var NavyYard1String = "<b>Navy Yard/Ballpark:</b><br>South Entrance<br>";
-	var NavyYard1Text = NavyYard1String.concat(greenLine);
-	var NavyYard2String = "<b>Navy Yard/Ballpark:</b><br>North Entrance<br>";
-	var NavyYard2Text = NavyYard2String.concat(greenLine);
-	var Anacostia1String = "<b>Anacostia</b><br>";
-	var Anacostia1Text = Anacostia1String.concat(greenLine);
-	var CongressHeights1String = "<b>Congress Heights</b><br>";
-	var CongressHeights1Text = CongressHeights1String.concat(greenLine);
-	var SouthernAve1String = "<b>Southern Ave</b><br>";
-	var SouthernAve1Text = SouthernAve1String.concat(greenLine);
-	var NaylorRd1String = "<b>Southern Ave</b><br>";
-	var NaylorRd1Text = NaylorRd1String.concat(greenLine);
-	var Suitland1String = "<b>Suitland</b><br>";
-	var Suitland1Text = Suitland1String.concat(greenLine);
-	var BranchAve1String = "<b>Branch Ave</b><br>";
-	var BranchAve1Text = BranchAve1String.concat(greenLine);
-	var FederalCenter1String1 = "<b>Federal Center SW</b><br>";
-	var FederalCenter1String2 = FederalCenter1String1.concat(blueLineBreak);
-	var FederalCenter1String3 = FederalCenter1String2.concat(orangeLineBreak);
-	var FederalCenter1Text = FederalCenter1String3.concat(silverLine);
-	var CapitolSouth1String1 = "<b>Capitol South</b><br>";
-	var CapitolSouth1String2 = CapitolSouth1String1.concat(blueLineBreak);
-	var CapitolSouth1String3 = CapitolSouth1String2.concat(orangeLineBreak);
-	var CapitolSouth1Text = CapitolSouth1String3.concat(silverLine);
-	var EasternMarket1String1 = "<b>Eastern Market</b><br>";
-	var EasternMarket1String2 = EasternMarket1String1.concat(blueLineBreak);
-	var EasternMarket1String3 = EasternMarket1String2.concat(orangeLineBreak);
-	var EasternMarket1Text = EasternMarket1String3.concat(silverLine);
-	var PotomacAve1String1 = "<b>Potomac Ave</b><br>";
-	var PotomacAve1String2 = PotomacAve1String1.concat(blueLineBreak);
-	var PotomacAve1String3 = PotomacAve1String2.concat(orangeLineBreak);
-	var PotomacAve1Text = PotomacAve1String3.concat(silverLine);
-	var StadiumArmory1String1 = "<b>Stadium-Armory</b><br>";
-	var StadiumArmory1String2 = StadiumArmory1String1.concat(blueLineBreak);
-	var StadiumArmory1String3 = StadiumArmory1String2.concat(orangeLineBreak);
-	var StadiumArmory1Text = StadiumArmory1String3.concat(silverLine);
-	var MinnesotaAve1String = "<b>Minnesota Ave:</b><br>North Entrance<br>";
-	var MinnesotaAve1Text = MinnesotaAve1String.concat(orangeLine);
-	var MinnesotaAve2String = "<b>Minnesota Ave:</b><br>South Entrance<br>";
-	var MinnesotaAve2Text = MinnesotaAve2String.concat(orangeLine);
-	var Deanwood1String = "<b>Deanwood:</b><br>Polk Ave Entrance<br>";
-	var Deanwood1Text = Deanwood1String.concat(orangeLine);
-	var Deanwood2String = "<b>Deanwood:</b><br>Minnesota Ave Entrance<br>";
-	var Deanwood2Text = Deanwood2String.concat(orangeLine);
-	var Cheverly1String = "<b>Cheverly</b><br>";
-	var Cheverly1Text = Cheverly1String.concat(orangeLine);
-	var Landover1String = "<b>Landover</b><br>";
-	var Landover1Text = Landover1String.concat(orangeLine);
-	var NewCarrollton1String = "<b>New Carollton:</b><br>Garden City Drive Entrance<br>";
-	var NewCarrollton1Text = NewCarrollton1String.concat(orangeLine);
-	var NewCarrollton2String = "<b>New Carollton:</b><br>Ellin Road Entrance<br>";
-	var NewCarrollton2Text = NewCarrollton2String.concat(orangeLine);
-	var BenningRd1String1 = "<b>Benning Road</b><br>";
-	var BenningRd1String2 = BenningRd1String1.concat(blueLineBreak);
-	var BenningRd1Text = BenningRd1String2.concat(silverLine);
-	var CapitolHeights1String1 = "<b>Capitol Heights</b><br>";
-	var CapitolHeights1String2 = CapitolHeights1String1.concat(blueLineBreak);
-	var CapitolHeights1Text = CapitolHeights1String2.concat(silverLine);
-	var AddisonRd1String1 = "<b>Addison Road</b><br>";
-	var AddisonRd1String2 = AddisonRd1String1.concat(blueLineBreak);
-	var AddisonRd1Text = AddisonRd1String2.concat(silverLine);
-	var MorganBlvd1String1 = "<b>Morgan Blvd</b><br>";
-	var MorganBlvd1String2 = MorganBlvd1String1.concat(blueLineBreak);
-	var MorganBlvd1Text = MorganBlvd1String2.concat(silverLine);
-	var Largo1String1 = "<b>Largo Town Center</b><br>";
-	var Largo1String2 = Largo1String1.concat(blueLineBreak);
-	var Largo1Text = Largo1String2.concat(silverLine);
-	var Smithsonian1String1 = "<b>Smithsonian</b><br>";
-	var Smithsonian1String2 = Smithsonian1String1.concat(blueLineBreak);
-	var Smithsonian1String3 = Smithsonian1String2.concat(orangeLineBreak);
-	var Smithsonian1Text = Smithsonian1String3.concat(silverLine);
-	var FederalTriangle1String1 = "<b>Federal Triangle</b><br>";
-	var FederalTriangle1String2 = FederalTriangle1String1.concat(blueLineBreak);
-	var FederalTriangle1String3 = FederalTriangle1String2.concat(orangeLineBreak);
-	var FederalTriangle1Text = FederalTriangle1String3.concat(silverLine);
-	var McPhersonSq1String1 = "<b>McPherson Square:</b><br> 14th and I Entrance<br>";
-	var McPhersonSq1String2 = McPhersonSq1String1.concat(blueLineBreak);
-	var McPhersonSq1String3 = McPhersonSq1String2.concat(orangeLineBreak);
-	var McPhersonSq1Text = McPhersonSq1String3.concat(silverLine);
-	var McPhersonSq2String1 = "<b>McPherson Square</b><br> Vermont and I Entrance<br>";
-	var McPhersonSq2String2 = McPhersonSq2String1.concat(blueLineBreak);
-	var McPhersonSq2String3 = McPhersonSq2String2.concat(orangeLineBreak);
-	var McPhersonSq2Text = McPhersonSq2String3.concat(silverLine);
-	var FarragutWest1String1 = "<b>Farragut West:</b><br>18th and I Entrance<br>";
-	var FarragutWest1String2 = FarragutWest1String1.concat(blueLineBreak);
-	var FarragutWest1String3 = FarragutWest1String2.concat(orangeLineBreak);
-	var FarragutWest1Text = FarragutWest1String3.concat(silverLine);
-	var FarragutWest2String1 = "<b>Farragut West:</b><br>17th and I Entrance<br>";
-	var FarragutWest2String2 = FarragutWest2String1.concat(blueLineBreak);
-	var FarragutWest2String3 = FarragutWest2String2.concat(orangeLineBreak);
-	var FarragutWest2Text = FarragutWest2String3.concat(silverLine);
-    var FoggyBottom1String1 = "<b>Foggy Bottom</b><br>";
-	var FoggyBottom1String2 = FoggyBottom1String1.concat(blueLineBreak);
-	var FoggyBottom1String3 = FoggyBottom1String2.concat(orangeLineBreak);
-	var FoggyBottom1Text = FoggyBottom1String3.concat(silverLine);
-	var Rosslyn1String1 = "<b>Rosslyn</b><br>";
-	var Rosslyn1String2 = Rosslyn1String1.concat(blueLineBreak);
-	var Rosslyn1String3 = Rosslyn1String2.concat(orangeLineBreak);
-	var Rosslyn1Text = Rosslyn1String3.concat(silverLine);
-	var Courthouse1String1 = "<b>Court House</b><br>";
-	var Courthouse1String2 = Courthouse1String1.concat(orangeLineBreak);
-	var Courthouse1Text = Courthouse1String2.concat(silverLine);
-	var Clarendon1String1 = "<b>Clarendon</b><br>";
-	var Clarendon1String2 = Clarendon1String1.concat(orangeLineBreak);
-	var Clarendon1Text = Clarendon1String2.concat(silverLine);
-	var VirginiaSq1String1 = "<b>Virginia Square/GMU</b><br>";
-	var VirginiaSq1String2 = VirginiaSq1String1.concat(orangeLineBreak);
-	var VirginiaSq1Text = VirginiaSq1String2.concat(silverLine);
-	var Ballston1String1 = "<b>Ballston/MU</b><br>";
-	var Ballston1String2 = Ballston1String1.concat(orangeLineBreak);
-	var Ballston1Text = Ballston1String2.concat(silverLine);
-	var EastFallsChurch1String1 = "<b>East Falls Church</b><br>";
-	var EastFallsChurch1String2 = EastFallsChurch1String1.concat(orangeLineBreak);
-	var EastFallsChurch1Text = EastFallsChurch1String2.concat(silverLine);
-	var WestFallsChurch1String1 = "<b>West Falls Church:</b><br>North Entrance<br>";
-	var WestFallsChurch1Text = WestFallsChurch1String1.concat(orangeLine);
-	var WestFallsChurch2String1 = "<b>West Falls Church:</b><br>South Entrance<br>";
-	var WestFallsChurch2Text = WestFallsChurch2String1.concat(orangeLine);
-	var DunnLoring1String = "<b>Dunn Loring</b><br>";
-	var DunnLoring1Text = DunnLoring1String.concat(orangeLine);
-	var Vienna1String = "<b>Vienna:</b><br>North Entrance<br>";
-	var Vienna1Text = Vienna1String.concat(orangeLine);
-	var Vienna2String = "<b>Vienna:</b><br>South Entrance<br>";
-	var Vienna2Text = Vienna2String.concat(orangeLine);
-	var McLean1String = "<b>McLean:</b><br>Colshire Drive Entrance<br>";
-	var McLean1Text = McLean1String.concat(silverLine);
-	var McLean2String = "<b>McLean:</b><br>Main Entrance<br>";
-	var McLean2Text = McLean2String.concat(silverLine);
-	var TysonsCorner1String = "<b>Tysons Corner:</b><br>North Entrance<br>";
-	var TysonsCorner1Text = TysonsCorner1String.concat(silverLine);
-	var TysonsCorner2String = "<b>McLean:</b><br>South Entrance<br>";
-	var TysonsCorner2Text = TysonsCorner2String.concat(silverLine);
-	var Greensboro1String = "<b>Greensboro:</b><br>North Entrance<br>";
-	var Greensboro1Text = Greensboro1String.concat(silverLine);
-	var Greensboro2String = "<b>Greensboro:</b><br>South Entrance<br>";
-	var Greensboro2Text = Greensboro2String.concat(silverLine);
-	var SpringHill1String = "<b>Spring Hill:</b><br>North Entrance<br>";
-	var SpringHill1Text = SpringHill1String.concat(silverLine);
-	var SpringHill2String = "<b>Spring Hill:</b><br>South Entrance<br>";
-	var SpringHill2Text = SpringHill2String.concat(silverLine);
-	var RestonEast1String = "<b>Reston East:</b><br>North Entrance<br>";
-	var RestonEast1Text = RestonEast1String.concat(silverLine);
-	var RestonEast2String = "<b>Reston East:</b><br>South Entrance<br>";
-	var RestonEast2Text = RestonEast2String.concat(silverLine);
-	var ArlingtonCemetary1Script = "<b>Arlington Cemetery:</b><br>North Entrance<br>";
-	var ArlingtonCemetary1Text = ArlingtonCemetary1Script.concat(blueLine);
-	var ArlingtonCemetary2Script = "<b>Arlington Cemetery:</b><br>South Entrance<br>";
-	var ArlingtonCemetary2Text = ArlingtonCemetary2Script.concat(blueLine);
-	var Pentagon1Script1 = "<b>Pentagon</b><br>";
-	var Pentagon1Script2 = Pentagon1Script1.concat(blueLineBreak);
-	var Pentagon1Text = Pentagon1Script2.concat(yellowLine);
-	var PentagonCity1Script1 = "<b>Pentagon City:</b><br>East Entrance<br>";
-	var PentagonCity1Script2 = PentagonCity1Script1.concat(blueLineBreak);
-	var PentagonCity1Text = PentagonCity1Script2.concat(yellowLine);
-	var PentagonCity2Script1 = "<b>Pentagon City:</b><br>West Entrance<br>";
-	var PentagonCity2Script2 = PentagonCity2Script1.concat(blueLineBreak);
-	var PentagonCity2Text = PentagonCity2Script2.concat(yellowLine);
-	var CrystalCity1Script1 = "<b>Crystal City</b><br>";
-	var CrystalCity1Script2 = CrystalCity1Script1.concat(blueLineBreak);
-	var CrystalCity1Text = CrystalCity1Script2.concat(yellowLine);
-	var ReaganNational1Script1 = "<b>Ronald Reagan Washington National Airport:</b><br>South Entrance<br>"
-	var ReaganNational1Script2 = ReaganNational1Script1.concat(blueLineBreak);
-	var ReaganNational1Text = ReaganNational1Script2.concat(yellowLine);
-	var ReaganNational2Script1 = "<b>Ronald Reagan Washington National Airport:</b><br>North Entrance<br>"
-	var ReaganNational2Script2 = ReaganNational2Script1.concat(blueLineBreak);
-	var ReaganNational2Text = ReaganNational2Script2.concat(yellowLine);
-	var BraddockRd1Script1 = "<b>Braddock Road</b><br>";
-	var BraddockRd1Script2 = BraddockRd1Script1.concat(blueLineBreak);
-	var BraddockRd1Text = BraddockRd1Script2.concat(yellowLine);
-    var OldTown1Script1 = "<b>King Street/Old Town:</b><br>North Entrance<br>";
-	var OldTown1Script2 = OldTown1Script1.concat(blueLineBreak);
-	var OldTown1Text = OldTown1Script2.concat(yellowLine);
-	var OldTown2Script1 = "<b>King Street/Old Town:</b><br>South Entrance<br>";
-	var OldTown2Script2 = OldTown2Script1.concat(blueLineBreak);
-	var OldTown2Text = OldTown2Script2.concat(yellowLine);
-	var EisenhowerAve1Script = "<b>Eisenhower Ave:</b><br>West Entrance<br>";
-	var EisenhowerAve1Text = EisenhowerAve1Script.concat(yellowLine);
-	var EisenhowerAve2Script = "<b>Eisenhower Ave:</b><br>East Entrance<br>";
-	var EisenhowerAve2Text = EisenhowerAve2Script.concat(yellowLine);
-	var Huntington1Script = "<b>Huntingdon:</b><br>North Entrance<br>";
-	var Huntington1Text = Huntington1Script.concat(yellowLine);
-	var Huntington2Script = "<b>Huntingdon:</b><br>South Entrance<br>";
-	var Huntington2Text = Huntington2Script.concat(yellowLine);
+    var USt1String2 = USt1String1.concat(greenLineBreak);
+    var USt1Text = USt1String2.concat(yellowLine);
+    var USt2String1 = "<b>U Street:</b><br> 10th and U Entrance<br>";
+    var USt2String2 = USt2String1.concat(greenLineBreak);
+    var USt2Text = USt2String2.concat(yellowLine);
     var VanDorn1Script = "<b>Van Dorn Street</b><br>"
-	var VanDorn1Text = VanDorn1Script.concat(blueLine);
-	var Franconia1Script = "<b>Franconia/Springfield:</b><br>North Entrance<br>"
-	var Franconia1Text = Franconia1Script.concat(blueLine);
-	var Franconia2Script = "<b>Franconia/Springfield:</b><br>South Entrance<br>"
-	var Franconia2Text = Franconia2Script.concat(blueLine);
-		
-	Glenmont1.bindPopup(Glenmont1Text);
-	Glenmont2.bindPopup(Glenmont2Text);
-	Wheaton1.bindPopup(Wheaton1Text);
-	Wheaton2.bindPopup(Wheaton2Text);
-	ForestGlen1.bindPopup(ForestGlen1Text);
-	SilverSpring1.bindPopup(SilverSpring1Text);
-	SilverSpring2.bindPopup(SilverSpring2Text);
-	Takoma1.bindPopup(Takoma1Text);
-	Takoma2.bindPopup(Takoma2Text);
-	FortTotten1.bindPopup(FortTotten1Text);
-	Brookland1.bindPopup(Brookland1Text);
-	Brookland2.bindPopup(Brookland2Text);
-	RhodeIsland1.bindPopup(RhodeIsland1Text);
-	NoMa1.bindPopup(NoMa1Text);
-	UnionStation1.bindPopup(UnionStation1Text);
-	JudiciarySquare1.bindPopup(JudiciarySquare1Text);
-	MetroCenter1.bindPopup(MetroCenter1Text);
-	FarragutNorth1.bindPopup(FarragutNorth1Text);
-	DupontCircle1.bindPopup(DupontCircle1Text);
-	WoodleyPark1.bindPopup(WoodleyPark1Text);
-	ClevelandPark1.bindPopup(ClevelandPark1Text);
-	ClevelandPark2.bindPopup(ClevelandPark2Text);
-	VanNess1.bindPopup(VanNess1Text);
-	VanNess2.bindPopup(VanNess2Text);
-	Tenleytown1.bindPopup(Tenleytown1Text);
-	Tenleytown2.bindPopup(Tenleytown2Text);
-	FriendshipHeights1.bindPopup(FriendshipHeights1Text);
-	FriendshipHeights2.bindPopup(FriendshipHeights2Text);
-	Bethesda1.bindPopup(Bethesda1Text);
-	MedicalCenter1.bindPopup(MedicalCenter1Text);
-	Stathmore1.bindPopup(Strathmore1Text);
-	WhiteFlint1.bindPopup(WhiteFlint1Text);
-	WhiteFlint2.bindPopup(WhiteFlint2Text);
-	Twinbrook1.bindPopup(Twinbrook1Text);
-	Twinbrook2.bindPopup(Twinbrook2Text);
-	Rockville1.bindPopup(Rockville1Text);
-	Rockville2.bindPopup(Rockville2Text);
-	ShadyGrove1.bindPopup(ShadyGrove1Text);
-	ShadyGrove2.bindPopup(ShadyGrove2Text);
-	Greenbelt1.bindPopup(Greenbelt1Text);
-	CollegePark1.bindPopup(CollegePark1Text);
-	CollegePark2.bindPopup(CollegePark2Text);
-	PrinceGeorges1.bindPopup(PrinceGeorges1Text);
-	WestHyattsville1.bindPopup(WestHyattsville1Text);
-	Petworth1.bindPopup(Petworth1Text);
-	ColumbiaHeights1.bindPopup(ColumbiaHeights1Text);
-	ColumbiaHeights2.bindPopup(ColumbiaHeights2Text);
-	USt1.bindPopup(USt1Text);
-	USt2.bindPopup(USt2Text);
-	Shaw1.bindPopup(Shaw1Text);
-	Shaw2.bindPopup(Shaw2Text);
-	MtVernon1.bindPopup(MtVernon1Text);
-	GalleryPlace1.bindPopup(GalleryPlace1Text);
-	Archives1.bindPopup(Archives1Text);
-	LEnfant1.bindPopup(LEnfant1Text);
-	Waterfront1.bindPopup(Waterfront1Text);
-	NavyYard1.bindPopup(NavyYard1Text);
-	NavyYard2.bindPopup(NavyYard2Text);
-	Anacostia1.bindPopup(Anacostia1Text);
-	CongressHeights1.bindPopup(CongressHeights1Text);
-	SouthernAve1.bindPopup(SouthernAve1Text);
-	NaylorRd1.bindPopup(NaylorRd1Text);
-	Suitland1.bindPopup(Suitland1Text);
-	BranchAve1.bindPopup(BranchAve1Text);
-	FederalCenter1.bindPopup(FederalCenter1Text);
-	CapitolSouth1.bindPopup(CapitolSouth1Text);
-	EasternMarket1.bindPopup(EasternMarket1Text);
-	PotomacAve1.bindPopup(PotomacAve1Text);
-	StadiumArmory1.bindPopup(StadiumArmory1Text);
-	MinnesotaAve1.bindPopup(MinnesotaAve1Text);
-	MinnesotaAve2.bindPopup(MinnesotaAve2Text);
-	Deanwood1.bindPopup(Deanwood1Text);
-	Deanwood2.bindPopup(Deanwood2Text);
-	Cheverly1.bindPopup(Cheverly1Text);
-	Landover1.bindPopup(Landover1Text);
-	NewCarrollton1.bindPopup(NewCarrollton1Text);
-	NewCarrollton2.bindPopup(NewCarrollton2Text);
-	BenningRd1.bindPopup(BenningRd1Text);
-	CapitolHeights1.bindPopup(CapitolHeights1Text);
+    var VanDorn1Text = VanDorn1Script.concat(blueLine);
+    var VanNess1String = "<b>Van Ness/UDC:</b><br>East Entrance<br>";
+    var VanNess1Text = VanNess1String.concat(redLine);
+    var VanNess2String = "<b>Van Ness/UDC:</b><br>West Entrance<br>";
+    var VanNess2Text = VanNess2String.concat(redLine);
+    var Vienna1String = "<b>Vienna:</b><br>North Entrance<br>";
+    var Vienna1Text = Vienna1String.concat(orangeLine);
+    var Vienna2String = "<b>Vienna:</b><br>South Entrance<br>";
+    var Vienna2Text = Vienna2String.concat(orangeLine);
+    var VirginiaSq1String1 = "<b>Virginia Square/GMU</b><br>";
+    var VirginiaSq1String2 = VirginiaSq1String1.concat(orangeLineBreak);
+    var VirginiaSq1Text = VirginiaSq1String2.concat(silverLine);
+    var Waterfront1String = "<b>Waterfront</b><br>";
+    var Waterfront1Text = Waterfront1String.concat(greenLine);
+    var WestFallsChurch1String1 = "<b>West Falls Church:</b><br>North Entrance<br>";
+    var WestFallsChurch1Text = WestFallsChurch1String1.concat(orangeLine);
+    var WestFallsChurch2String1 = "<b>West Falls Church:</b><br>South Entrance<br>";
+    var WestFallsChurch2Text = WestFallsChurch2String1.concat(orangeLine);
+    var WestHyattsville1String = "<b>West Hyattsville</b><br>";
+    var WestHyattsville1Text = WestHyattsville1String.concat(greenLine);
+    var Wheaton1String = "<b>Wheaton:</b><br>West Entrance<br>";
+    var Wheaton1Text = Wheaton1String.concat(redLine);
+    var Wheaton2String = "<b>Wheaton:</b><br>East Entrance<br>";
+    var Wheaton2Text = Wheaton2String.concat(redLine);
+    var WhiteFlint1String = "<b>White Flint:</b><br>East Entrance<br>";
+    var WhiteFlint1Text = WhiteFlint1String.concat(redLine);
+    var WhiteFlint2String = "<b>White Flint:</b><br>West Entrance<br>";
+    var WhiteFlint2Text = WhiteFlint2String.concat(redLine);
+    var WoodleyPark1String = "<b>Woodley Park</b><br>";
+    var WoodleyPark1Text = WoodleyPark1String.concat(redLine);
+    
 	AddisonRd1.bindPopup(AddisonRd1Text);
-	MorganBlvd1.bindPopup(MorganBlvd1Text);
-	Largo1.bindPopup(Largo1Text);
-	Smithsonian1.bindPopup(Smithsonian1Text);
-	FederalTriangle1.bindPopup(FederalTriangle1Text);
-	McPhersonSq1.bindPopup(McPhersonSq1Text);
-	McPhersonSq2.bindPopup(McPhersonSq2Text);
-	FarragutWest1.bindPopup(FarragutWest1Text);
-	FarragutWest2.bindPopup(FarragutWest2Text);
-	FoggyBottom1.bindPopup(FoggyBottom1Text);
-	Rosslyn1.bindPopup(Rosslyn1Text);
-	Courthouse1.bindPopup(Courthouse1Text);
+    Anacostia1.bindPopup(Anacostia1Text);
+    Archives1.bindPopup(Archives1Text);
+    ArlingtonCemetary1.bindPopup(ArlingtonCemetary1Text);
+    ArlingtonCemetary2.bindPopup(ArlingtonCemetary2Text);
+    Ballston1.bindPopup(Ballston1Text);
+    BenningRd1.bindPopup(BenningRd1Text);
+    Bethesda1.bindPopup(Bethesda1Text);
+    BraddockRd1.bindPopup(BraddockRd1Text);
+    BranchAve1.bindPopup(BranchAve1Text);
+    Brookland1.bindPopup(Brookland1Text);
+    Brookland2.bindPopup(Brookland2Text);
+    CapitolHeights1.bindPopup(CapitolHeights1Text);
+    CapitolSouth1.bindPopup(CapitolSouth1Text);
+    Cheverly1.bindPopup(Cheverly1Text);
 	Clarendon1.bindPopup(Clarendon1Text);
-	VirginiaSq1.bindPopup(VirginiaSq1Text);
-	Ballston1.bindPopup(Ballston1Text);
-	EastFallsChurch1.bindPopup(EastFallsChurch1Text);
-	WestFallsChurch1.bindPopup(WestFallsChurch1Text);
-	WestFallsChurch2.bindPopup(WestFallsChurch2Text);
-	DunnLoring1.bindPopup(DunnLoring1Text);
-	Vienna1.bindPopup(Vienna1Text);
-	Vienna2.bindPopup(Vienna2Text);
-	McLean1.bindPopup(McLean1Text);
-	McLean2.bindPopup(McLean2Text);
-	TysonsCorner1.bindPopup(TysonsCorner1Text);
-	TysonsCorner2.bindPopup(TysonsCorner2Text);
-	Greensboro1.bindPopup(Greensboro1Text);
-	Greensboro2.bindPopup(Greensboro2Text);
+    ClevelandPark1.bindPopup(ClevelandPark1Text);
+    ClevelandPark2.bindPopup(ClevelandPark2Text);
+    CollegePark1.bindPopup(CollegePark1Text);
+    CollegePark2.bindPopup(CollegePark2Text);
+    ColumbiaHeights1.bindPopup(ColumbiaHeights1Text);
+    ColumbiaHeights2.bindPopup(ColumbiaHeights2Text);
+    CongressHeights1.bindPopup(CongressHeights1Text);
+    Courthouse1.bindPopup(Courthouse1Text);
+    CrystalCity1.bindPopup(CrystalCity1Text);
+    Deanwood1.bindPopup(Deanwood1Text);
+    Deanwood2.bindPopup(Deanwood2Text);
+    DunnLoring1.bindPopup(DunnLoring1Text);
+    DupontCircle1.bindPopup(DupontCircle1Text);
+    EasternMarket1.bindPopup(EasternMarket1Text);
+    EastFallsChurch1.bindPopup(EastFallsChurch1Text);
+    EisenhowerAve1.bindPopup(EisenhowerAve1Text);
+    EisenhowerAve2.bindPopup(EisenhowerAve2Text);
+    FarragutNorth1.bindPopup(FarragutNorth1Text);
+    FarragutWest1.bindPopup(FarragutWest1Text);
+    FarragutWest2.bindPopup(FarragutWest2Text);
+	FederalCenter1.bindPopup(FederalCenter1Text);
+    FederalTriangle1.bindPopup(FederalTriangle1Text);
+    FoggyBottom1.bindPopup(FoggyBottom1Text);
+    ForestGlen1.bindPopup(ForestGlen1Text);
+    FortTotten1.bindPopup(FortTotten1Text);
+    Franconia1.bindPopup(Franconia1Text);
+    Franconia2.bindPopup(Franconia2Text);
+    FriendshipHeights1.bindPopup(FriendshipHeights1Text);
+    FriendshipHeights2.bindPopup(FriendshipHeights2Text);
+    GalleryPlace1.bindPopup(GalleryPlace1Text);
+    Glenmont1.bindPopup(Glenmont1Text);
+    Glenmont2.bindPopup(Glenmont2Text);
+    Greenbelt1.bindPopup(Greenbelt1Text);
+    Greensboro1.bindPopup(Greensboro1Text);
+    Greensboro2.bindPopup(Greensboro2Text);
+    Huntington1.bindPopup(Huntington1Text);
+    Huntington2.bindPopup(Huntington2Text);
+    JudiciarySquare1.bindPopup(JudiciarySquare1Text);
+	Landover1.bindPopup(Landover1Text);
+    Largo1.bindPopup(Largo1Text);
+	LEnfant1.bindPopup(LEnfant1Text);
+    McLean1.bindPopup(McLean1Text);
+    McLean2.bindPopup(McLean2Text);
+    McPhersonSq1.bindPopup(McPhersonSq1Text);
+    McPhersonSq2.bindPopup(McPhersonSq2Text);
+	MedicalCenter1.bindPopup(MedicalCenter1Text);
+    MetroCenter1.bindPopup(MetroCenter1Text);
+    MinnesotaAve1.bindPopup(MinnesotaAve1Text);
+    MinnesotaAve2.bindPopup(MinnesotaAve2Text);
+    MorganBlvd1.bindPopup(MorganBlvd1Text);
+	MtVernon1.bindPopup(MtVernon1Text);
+    NavyYard1.bindPopup(NavyYard1Text);
+    NavyYard2.bindPopup(NavyYard2Text);
+    NaylorRd1.bindPopup(NaylorRd1Text);
+    NewCarrollton1.bindPopup(NewCarrollton1Text);
+    NewCarrollton2.bindPopup(NewCarrollton2Text);
+    NoMa1.bindPopup(NoMa1Text);
+    OldTown1.bindPopup(OldTown1Text);
+    OldTown2.bindPopup(OldTown2Text);
+    Pentagon1.bindPopup(Pentagon1Text);
+    PentagonCity1.bindPopup(PentagonCity1Text);
+    PentagonCity2.bindPopup(PentagonCity2Text);
+    Petworth1.bindPopup(Petworth1Text);
+    PotomacAve1.bindPopup(PotomacAve1Text);
+    PrinceGeorges1.bindPopup(PrinceGeorges1Text);
+    ReaganNational1.bindPopup(ReaganNational1Text);
+    ReaganNational2.bindPopup(ReaganNational2Text);
+    RestonEast1.bindPopup(RestonEast1Text);
+    RestonEast2.bindPopup(RestonEast2Text);
+    RhodeIsland1.bindPopup(RhodeIsland1Text);
+    Rockville1.bindPopup(Rockville1Text);
+    Rockville2.bindPopup(Rockville2Text);
+    Rosslyn1.bindPopup(Rosslyn1Text);
+    ShadyGrove1.bindPopup(ShadyGrove1Text);
+    ShadyGrove2.bindPopup(ShadyGrove2Text);
+    Shaw1.bindPopup(Shaw1Text);
+    Shaw2.bindPopup(Shaw2Text);
+    SilverSpring1.bindPopup(SilverSpring1Text);
+    SilverSpring2.bindPopup(SilverSpring2Text);
+    Smithsonian1.bindPopup(Smithsonian1Text);
+    SouthernAve1.bindPopup(SouthernAve1Text);
 	SpringHill1.bindPopup(SpringHill1Text);
-	SpringHill2.bindPopup(SpringHill2Text);
-	RestonEast1.bindPopup(RestonEast1Text);
-	RestonEast2.bindPopup(RestonEast2Text);
-	ArlingtonCemetary1.bindPopup(ArlingtonCemetary1Text);
-	ArlingtonCemetary2.bindPopup(ArlingtonCemetary2Text);
-	Pentagon1.bindPopup(Pentagon1Text);
-	PentagonCity1.bindPopup(PentagonCity1Text);
-	PentagonCity2.bindPopup(PentagonCity2Text);
-	CrystalCity1.bindPopup(CrystalCity1Text);
-	ReaganNational1.bindPopup(ReaganNational1Text);
-	ReaganNational2.bindPopup(ReaganNational2Text);
-	BraddockRd1.bindPopup(BraddockRd1Text);
-	OldTown1.bindPopup(OldTown1Text);
-	OldTown2.bindPopup(OldTown2Text);
-	EisenhowerAve1.bindPopup(EisenhowerAve1Text);
-	EisenhowerAve2.bindPopup(EisenhowerAve2Text);
-	Huntington1.bindPopup(Huntington1Text);
-	Huntington2.bindPopup(Huntington2Text);
-	VanDorn1.bindPopup(VanDorn1Text);
-	Franconia1.bindPopup(Franconia1Text);
-	Franconia2.bindPopup(Franconia2Text);
-	
-
-	
-
+    SpringHill2.bindPopup(SpringHill2Text);
+    StadiumArmory1.bindPopup(StadiumArmory1Text);
+    Strathmore1.bindPopup(Strathmore1Text);	
+    Suitland1.bindPopup(Suitland1Text);
+    Takoma1.bindPopup(Takoma1Text);
+    Takoma2.bindPopup(Takoma2Text);
+    Tenleytown1.bindPopup(Tenleytown1Text);
+    Tenleytown2.bindPopup(Tenleytown2Text);
+    TysonsCorner1.bindPopup(TysonsCorner1Text);
+    TysonsCorner2.bindPopup(TysonsCorner2Text);
+    Twinbrook1.bindPopup(Twinbrook1Text);
+    Twinbrook2.bindPopup(Twinbrook2Text);
+    UnionStation1.bindPopup(UnionStation1Text);
+    USt1.bindPopup(USt1Text);
+    USt2.bindPopup(USt2Text);
+    VanDorn1.bindPopup(VanDorn1Text);
+    VanNess1.bindPopup(VanNess1Text);
+    VanNess2.bindPopup(VanNess2Text);
+    Vienna1.bindPopup(Vienna1Text);
+    Vienna2.bindPopup(Vienna2Text);
+    VirginiaSq1.bindPopup(VirginiaSq1Text);
+	Waterfront1.bindPopup(Waterfront1Text);
+    WestFallsChurch1.bindPopup(WestFallsChurch1Text);
+    WestFallsChurch2.bindPopup(WestFallsChurch2Text);
+    WestHyattsville1.bindPopup(WestHyattsville1Text);
+    Wheaton1.bindPopup(Wheaton1Text);
+    Wheaton2.bindPopup(Wheaton2Text);
+    WhiteFlint1.bindPopup(WhiteFlint1Text);
+    WhiteFlint2.bindPopup(WhiteFlint2Text);
+    WoodleyPark1.bindPopup(WoodleyPark1Text);
 			
 	</script>
 </body>
