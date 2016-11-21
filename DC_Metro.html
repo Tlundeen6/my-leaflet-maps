@@ -147,7 +147,9 @@
     var Franconia2 = L.marker([38.76601, -77.16844], {icon: blueIcon}).addTo(dcmap);
     var FriendshipHeights1 = L.marker([38.96103, -77.08564], {icon: redIcon}).addTo(dcmap);
     var FriendshipHeights2 = L.marker([38.96073, -77.08600], {icon: redIcon}).addTo(dcmap);
-    var GalleryPlace1 = L.marker([38.89740, -77.02177], {icon: blackIcon}).addTo(dcmap);
+    var GalleryPlace1 = L.marker([38.89756, -77.02173], {icon: blackIcon}).addTo(dcmap);
+	var GalleryPlace2 = L.marker([38.89963, -77.02171], {icon: blackIcon}).addTo(dcmap);
+	var GalleryPlace3 = L.marker([38.89818, -77.02373], {icon: blackIcon}).addTo(dcmap);
     var	Glenmont1 = L.marker([39.06229, -77.05320], {icon: redIcon}).addTo(dcmap);
     var	Glenmont2 = L.marker([39.06192, -77.05373], {icon: redIcon}).addTo(dcmap);
     var Greenbelt1 = L.marker([39.01104, -76.91104], {icon: greenIcon}).addTo(dcmap);
@@ -212,7 +214,7 @@
     var Twinbrook2 = L.marker([39.06226, -77.12085], {icon: redIcon}).addTo(dcmap);
     var TysonsCorner1 = L.marker([38.92065, -77.22208], {icon: silverIcon}).addTo(dcmap); 
     var TysonsCorner2 = L.marker([38.91977, -77.22222], {icon: silverIcon}).addTo(dcmap); 
-    var UnionStation1 = L.marker([38.89754, -77.00551], {icon: redIcon}).addTo(dcmap);
+    var UnionStation1 = L.marker([38.89744, -77.00728], {icon: redIcon}).addTo(dcmap);
     var USt1 = L.marker([38.91686, -77.02914], {icon: blackIcon}).addTo(dcmap);
     var USt2 = L.marker([38.91682, -77.02598], {icon: blackIcon}).addTo(dcmap);
     var VanDorn1 = L.marker([38.79958, -77.12914], {icon: blueIcon}).addTo(dcmap);
@@ -372,10 +374,18 @@
     var FriendshipHeights1Text = FriendshipHeights1String.concat(redLine);
     var FriendshipHeights2String = "<b>Friendship Heights:</b><br>West Entrance<br>";
     var FriendshipHeights2Text = FriendshipHeights2String.concat(redLine);
-    var GalleryPlace1String1 = "<b>Gallery Place</b><br>";
+    var GalleryPlace1String1 = "<b>Gallery Place</b><br>7th and F Entrance<br>";
     var GalleryPlace1String2 = GalleryPlace1String1.concat(greenLineBreak);
     var GalleryPlace1String3 = GalleryPlace1String2.concat(redLineBreak);
     var GalleryPlace1Text = GalleryPlace1String3.concat(yellowLine);
+	var GalleryPlace2String1 = "<b>Gallery Place</b><br>7th and H Entrance<br>";
+    var GalleryPlace2String2 = GalleryPlace2String1.concat(greenLineBreak);
+    var GalleryPlace2String3 = GalleryPlace2String2.concat(redLineBreak);
+    var GalleryPlace2Text = GalleryPlace2String3.concat(yellowLine);
+	var GalleryPlace3String1 = "<b>Gallery Place</b><br>9th and G Entrance<br>";
+    var GalleryPlace3String2 = GalleryPlace3String1.concat(greenLineBreak);
+    var GalleryPlace3String3 = GalleryPlace3String2.concat(redLineBreak);
+    var GalleryPlace3Text = GalleryPlace3String3.concat(yellowLine);
     var Glenmont1String = "<b>Glemont:</b><br>East Entrance<br>";
     var Glenmont1Text = Glenmont1String.concat(redLine);
     var Glenmont2String = "<b>Glemont:</b><br>West Entrance<br>";
@@ -622,6 +632,8 @@
     FriendshipHeights1.bindPopup(FriendshipHeights1Text);
     FriendshipHeights2.bindPopup(FriendshipHeights2Text);
     GalleryPlace1.bindPopup(GalleryPlace1Text);
+	GalleryPlace2.bindPopup(GalleryPlace2Text);
+	GalleryPlace3.bindPopup(GalleryPlace3Text);
     Glenmont1.bindPopup(Glenmont1Text);
     Glenmont2.bindPopup(Glenmont2Text);
     Greenbelt1.bindPopup(Greenbelt1Text);
