@@ -743,7 +743,7 @@
 		},
 		"geometry": {
 			"type": "Point",
-			"coordinates": [-77.04336, 38.90848]
+			"coordinates": [-77.22843, 38.88282]
 		}
 	};
 	
@@ -1995,27 +1995,146 @@
 		}
 	};
 	
+	
+	var BlackCircle = {
+	radius: 9,
+    fillColor: "#3b3b3b",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var BlueCircle = {
+	radius: 9,
+    fillColor: "#0000ff",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var GreenCircle = {
+	radius: 9,
+    fillColor: "#00b33c",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var OrangeCircle = {
+    radius: 9,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var RedCircle = {
+	radius: 9,
+    fillColor: "#f91f1f",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var SilverCircle = {
+	radius: 9,
+    fillColor: "#d6dbdf",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+	
+	var YellowCircle = {
+	radius: 9,
+    fillColor: "#fff92a",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 1
+	};
+
 	function onEachFeature(feature, layer) {
 		if (feature.properties && feature.properties.popupContent) {
 			layer.bindPopup(feature.properties.popupContent);
 		}
 	}
 	
-    var stations = [AddisonRd1, Anacostia1, Archives1, ArlingtonCemetery1, ArlingtonCemetery2, Ballston1, BenningRd1, Bethesda1, BraddockRd1, BranchAve1, 
-    Brookland1, Brookland2, CapitolHeights1, CapitolSouth1, Cheverly1, Clarendon1, ClevelandPark1, ClevelandPark2, CollegePark1, CollegePark2, ColumbiaHeights1, 
-    ColumbiaHeights2, CongressHeights1, Courthouse1, CrystalCity1, Deanwood1, Deanwood2, DunnLoring1, DupontCircle1, EasternMarket1, EastFallsChurch1, 
-    EisenhowerAve1, EisenhowerAve2, FarragutNorth1, FarragutWest1, FarragutWest2, FederalCenter1, FederalTriangle1, FoggyBottom1, ForestGlen1, FortTotten1, 
-    Franconia1, Franconia2, FriendshipHeights1, FriendshipHeights2, GalleryPlace1, GalleryPlace2, GalleryPlace3, Glenmont1, Glenmont2, Greenbelt1, Greensboro1, 
-    Greensboro2, Huntington1, Huntington2, JudiciarySquare1, Landover1, Largo1, LEnfant1, McLean1, McLean2, McPhersonSq1, McPhersonSq2, MedicalCenter1, 
-    MinnesotaAve1, MinnesotaAve2, MorganBlvd1, MtVernon1, NavyYard1, NavyYard2, NaylorRd1, NewCarrollton1, NewCarrollton2, NoMa1, OldTown1, OldTown2, Pentagon1, 
-	PentagonCity1, PentagonCity2, Petworth1, PotomacAve1, PrinceGeorges1, ReaganNational1, ReaganNational2, RestonEast1, RestonEast2, RhodeIsland1, Rockville1, 
-	Rockville2, Rosslyn1, ShadyGrove1, ShadyGrove2, Shaw1, Shaw2, SilverSpring1, SilverSpring2, Smithsonian1, SouthernAve1, SpringHill1, SpringHill2, StadiumArmory1,
-	Strathmore1, Suitland1, Takoma1, Takoma2, Tenleytown1, Tenleytown2, TysonsCorner1, TysonsCorner2, Twinbrook1, Twinbrook2, UnionStation1, USt1, USt2, VanDorn1, 
-	VanNess1, VanNess2, Vienna1, Vienna2, VirginiaSq1, Waterfront1, WestFallsChurch1, WestFallsChurch2, WestHyattsville1, Wheaton1, Wheaton2, WhiteFlint1, WhiteFlint2, 
-	WoodleyPark1]
+    var BlackStations = [AddisonRd1, Archives1, Ballston1, BenningRd1, BraddockRd1, CapitolHeights1, CapitolSouth1, Clarendon1, ColumbiaHeights1, 
+	ColumbiaHeights2, Courthouse1, CrystalCity1, EasternMarket1, EastFallsChurch1, FarragutWest1, FarragutWest2, FederalCenter1, FederalTriangle1, 
+	FoggyBottom1, FortTotten1, GalleryPlace1, GalleryPlace2, GalleryPlace3, Largo1, LEnfant1, McPhersonSq1, McPhersonSq2, MetroCenter1, MorganBlvd1, 
+	MtVernon1, OldTown1, OldTown2, Pentagon1, PentagonCity1, PentagonCity2, Petworth1, PotomacAve1, ReaganNational1, ReaganNational2, Rosslyn1, Shaw1, 
+	Shaw2, Smithsonian1, SouthernAve1, StadiumArmory1, USt1, USt2, VirginiaSq1]
 	
-	L.geoJSON(stations, {
-		onEachFeature: onEachFeature
+	var BlueStations = [ArlingtonCemetery1, ArlingtonCemetery2, Franconia1, Franconia2, VanDorn1] 
+	
+	var GreenStations = [Anacostia1, BranchAve1, CollegePark1, CollegePark2, CongressHeights1, Greenbelt1, NavyYard1, NavyYard2, NaylorRd1, PrinceGeorges1, 
+	SouthernAve1, Suitland1, Waterfront1, WestHyattsville1]
+	
+	var OrangeStations = [Cheverly1, Deanwood1, Deanwood2, DunnLoring1, Landover1, MinnesotaAve1, MinnesotaAve2, NewCarrollton1, NewCarrollton2, Vienna1, 
+	Vienna2, WestFallsChurch1, WestFallsChurch2]
+	
+	var RedStations = [Bethesda1, Brookland1, Brookland2, ClevelandPark1, ClevelandPark2, DupontCircle1, FarragutNorth1, ForestGlen1, FriendshipHeights1, 
+	FriendshipHeights2, Glenmont1, Glenmont2, JudiciarySquare1, MedicalCenter1, NoMa1, RhodeIsland1, Rockville1, Rockville2, ShadyGrove1, ShadyGrove2, 
+	SilverSpring1, SilverSpring2, Strathmore1, Takoma1, Takoma2, Tenleytown1, Tenleytown2, Twinbrook1, Twinbrook2, UnionStation1, VanNess1, VanNess2, 
+	Wheaton1, Wheaton2, WhiteFlint1, WhiteFlint2, WoodleyPark1]
+	
+	var SilverStations = [Greensboro1, Greensboro2, McLean1, McLean2, RestonEast1, RestonEast2, SpringHill1, SpringHill2, TysonsCorner1, TysonsCorner2]
+
+	var YellowStations = [EisenhowerAve1, EisenhowerAve2, Huntington1, Huntington2]
+	
+	L.geoJSON(BlackStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, BlackCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(BlueStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, BlueCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(GreenStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, GreenCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(OrangeStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, OrangeCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(RedStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, RedCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(SilverStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, SilverCircle);
+		}
+	}).addTo(dcmap);
+	
+	L.geoJSON(YellowStations, {
+		onEachFeature: onEachFeature,
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, YellowCircle);
+		}
 	}).addTo(dcmap);
 
 	
