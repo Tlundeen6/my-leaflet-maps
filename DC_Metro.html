@@ -24,14 +24,17 @@
 	    background-color: "FFFFFF";
 	    text-align: center;
 		text-shadow: 1px 1px 4px "#808080";
-	}
-		
+	}		
 </style>
 </head>
 <body>
 	<div class = "title">
 	    <h1 style="color:#DE1919;font-family:Arial">DC Metro Station Entrances</h1>
 	    <p style="color:#DE1919;font-family:Arial">Click any icon for attribute information</p>
+		<button onclick="ZoomDowntown()">Downtown DC</button>
+		<p> </p>
+	<script>
+	</script>
 	</div>
 	<div>
 	<p> </p>
@@ -220,12 +223,24 @@
     var Largo1String1 = "<b>Largo Town Center</b><br>";
     var Largo1String2 = Largo1String1.concat(blueLineBreak);
     var Largo1Text = Largo1String2.concat(silverLine);
-    var LEnfant1String1 = "<b>L'Enfant Plaza</b><br>";
+    var LEnfant1String1 = "<b>L'Enfant Plaza:</b><br>7th and C Entrance<br>";
     var LEnfant1String2 = LEnfant1String1.concat(blueLineBreak);
     var LEnfant1String3 = LEnfant1String2.concat(greenLineBreak);
     var LEnfant1String4 = LEnfant1String3.concat(orangeLineBreak);
     var LEnfant1String5 = LEnfant1String4.concat(silverLineBreak);
-    var LEnfant1Text = LEnfant1String5.concat(yellowLine);
+	var LEnfant1Text = LEnfant1String5.concat(yellowLine);
+	var LEnfant2String1 = "<b>L'Enfant Plaza:</b><br>9th and D Entrance<br>";
+    var LEnfant2String2 = LEnfant2String1.concat(blueLineBreak);
+    var LEnfant2String3 = LEnfant2String2.concat(greenLineBreak);
+    var LEnfant2String4 = LEnfant2String3.concat(orangeLineBreak);
+    var LEnfant2String5 = LEnfant2String4.concat(silverLineBreak);
+    var LEnfant2Text = LEnfant2String5.concat(yellowLine);
+	var LEnfant3String1 = "<b>L'Enfant Plaza:</b><br>7th and D Entrance<br>";
+    var LEnfant3String2 = LEnfant3String1.concat(blueLineBreak);
+    var LEnfant3String3 = LEnfant3String2.concat(greenLineBreak);
+    var LEnfant3String4 = LEnfant3String3.concat(orangeLineBreak);
+    var LEnfant3String5 = LEnfant3String4.concat(silverLineBreak);
+    var LEnfant3Text = LEnfant3String5.concat(yellowLine);
     var McLean1String = "<b>McLean:</b><br>Colshire Drive Entrance<br>";
     var McLean1Text = McLean1String.concat(silverLine);
     var McLean2String = "<b>McLean:</b><br>Main Entrance<br>";
@@ -240,11 +255,16 @@
     var McPhersonSq2Text = McPhersonSq2String3.concat(silverLine);
     var MedicalCenter1String = "<b>Medical Center</b><br>";
     var MedicalCenter1Text = MedicalCenter1String.concat(redLine);
-    var MetroCenter1String1 = "<b>Metro Center</b><br>";
+    var MetroCenter1String1 = "<b>Metro Center:</b><br>13th and G Entrance<br>";
     var MetroCenter1String2 = MetroCenter1String1.concat(blueLineBreak);
     var MetroCenter1String3 = MetroCenter1String2.concat(orangeLineBreak);
     var MetroCenter1String4 = MetroCenter1String3.concat(redLineBreak);
     var MetroCenter1Text = MetroCenter1String4.concat(silverLine);
+	var MetroCenter2String1 = "<b>Metro Center:</b><br>12th and G Entrance<br>";
+    var MetroCenter2String2 = MetroCenter2String1.concat(blueLineBreak);
+    var MetroCenter2String3 = MetroCenter2String2.concat(orangeLineBreak);
+    var MetroCenter2String4 = MetroCenter2String3.concat(redLineBreak);
+    var MetroCenter2Text = MetroCenter2String4.concat(silverLine);
     var MinnesotaAve1String = "<b>Minnesota Ave:</b><br>North Entrance<br>";
     var MinnesotaAve1Text = MinnesotaAve1String.concat(orangeLine);
     var MinnesotaAve2String = "<b>Minnesota Ave:</b><br>South Entrance<br>";
@@ -255,9 +275,9 @@
     var MtVernon1String1 = "<b>Mount Vernon Square</b><br>";
     var MtVernon1String2 = MtVernon1String1.concat(greenLineBreak);
     var MtVernon1Text = MtVernon1String2.concat(yellowLine);
-    var NavyYard1String = "<b>Navy Yard/Ballpark:</b><br>South Entrance<br>";
+    var NavyYard1String = "<b>Navy Yard/Ballpark:</b><br>Half and M Entrance<br>";
     var NavyYard1Text = NavyYard1String.concat(greenLine);
-    var NavyYard2String = "<b>Navy Yard/Ballpark:</b><br>North Entrance<br>";
+    var NavyYard2String = "<b>Navy Yard/Ballpark:</b><br>New Jersey and M Entrance<br>";
     var NavyYard2Text = NavyYard2String.concat(greenLine); 
     var NaylorRd1String = "<b>Southern Ave</b><br>";
     var NaylorRd1Text = NaylorRd1String.concat(greenLine);
@@ -1110,12 +1130,36 @@
 	var LEnfant1 = {
 		"type": "Feature",
 		"properties": {
-			"name": "L'Entfant Plaza",
+			"name": "L'Entfant Plaza 7th and C",
 			"popupContent": LEnfant1Text
 		},
 		"geometry": {
 			"type": "Point",
 			"coordinates": [-77.02166, 38.88624]
+		}
+	};
+	
+	var LEnfant2 = {
+		"type": "Feature",
+		"properties": {
+			"name": "L'Entfant Plaza 9th and D",
+			"popupContent": LEnfant2Text
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-77.02359, 38.88417]
+		}
+	};
+	
+	var LEnfant3 = {
+		"type": "Feature",
+		"properties": {
+			"name": "L'Entfant Plaza 7th and D",
+			"popupContent": LEnfant3Text
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-77.02095, 38.88474]
 		}
 	};
 	
@@ -1194,12 +1238,24 @@
 	var MetroCenter1 = {
 		"type": "Feature",
 		"properties": {
-			"name": "Metro Center",
+			"name": "Metro Center 13th and G",
 			"popupContent": MetroCenter1Text
 		},
 		"geometry": {
 			"type": "Point",
 			"coordinates": [-77.02948, 38.89822]
+		}
+	};
+	
+	var MetroCenter2 = {
+		"type": "Feature",
+		"properties": {
+			"name": "Metro Center 12th and G",
+			"popupContent": MetroCenter2Text
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-77.02791, 38.89855]
 		}
 	};
 	
@@ -1254,19 +1310,19 @@
 	var NavyYard1 = {
 		"type": "Feature",
 		"properties": {
-			"name": "Navy Yard South",
+			"name": "Navy Yard Half and M",
 			"popupContent": NavyYard1Text
 		},
 		"geometry": {
 			"type": "Point",
-			"coordinates": [-77.00442, 38.87603]
+			"coordinates": [-77.00734, 38.87626]
 		}
 	};
 	
 	var NavyYard2 = {
 		"type": "Feature",
 		"properties": {
-			"name": "Navy Yard North",
+			"name": "Navy Yard New Jersey and M",
 			"popupContent": NavyYard2Text
 		},
 		"geometry": {
@@ -2067,9 +2123,9 @@
 	
     var BlackStations = [AddisonRd1, Archives1, Ballston1, BenningRd1, BraddockRd1, CapitolHeights1, CapitolSouth1, Clarendon1, ColumbiaHeights1, 
 	ColumbiaHeights2, Courthouse1, CrystalCity1, EasternMarket1, EastFallsChurch1, FarragutWest1, FarragutWest2, FederalCenter1, FederalTriangle1, 
-	FoggyBottom1, FortTotten1, GalleryPlace1, GalleryPlace2, GalleryPlace3, Largo1, LEnfant1, McPhersonSq1, McPhersonSq2, MetroCenter1, MorganBlvd1, 
-	MtVernon1, OldTown1, OldTown2, Pentagon1, PentagonCity1, PentagonCity2, Petworth1, PotomacAve1, ReaganNational1, ReaganNational2, Rosslyn1, Shaw1, 
-	Shaw2, Smithsonian1, SouthernAve1, StadiumArmory1, USt1, USt2, VirginiaSq1]
+	FoggyBottom1, FortTotten1, GalleryPlace1, GalleryPlace2, GalleryPlace3, Largo1, LEnfant1, LEnfant2, LEnfant3, McPhersonSq1, McPhersonSq2, 
+	MetroCenter1, MetroCenter2, MorganBlvd1, MtVernon1, OldTown1, OldTown2, Pentagon1, PentagonCity1, PentagonCity2, Petworth1, PotomacAve1, 
+	ReaganNational1, ReaganNational2, Rosslyn1, Shaw1, Shaw2, Smithsonian1, SouthernAve1, StadiumArmory1, USt1, USt2, VirginiaSq1]
 	
 	var BlueStations = [ArlingtonCemetery1, ArlingtonCemetery2, Franconia1, Franconia2, VanDorn1] 
 	
@@ -2137,7 +2193,11 @@
 		}
 	}).addTo(dcmap);
 
+	function ZoomDowntown(){
 	
+	    dcmap.setZoomAround([38.89, -77.03], 14);
+		
+	}
 	
    
     
