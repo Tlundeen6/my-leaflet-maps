@@ -9,7 +9,7 @@
     #map {
 		border: 1px solid black;
         width: 100%;
-        height: 679px;
+        height: 650px;
     }
 	
 	body {
@@ -32,6 +32,9 @@
 	    <h1 style="color:#DE1919;font-family:Arial">DC Metro Station Entrances</h1>
 	    <p style="color:#DE1919;font-family:Arial">Click any icon for attribute information</p>
 		<button onclick="ZoomDowntown()">Downtown DC</button>
+		<button onclick="ZoomSouthwest()">Southwest DC/Capitol Hill</button>
+		<button onclick="ZoomTysons()">Tysons</button>
+		<button onclick="ZoomFull()">Full Extent</button>
 		<p> </p>
 	<script>
 	</script>
@@ -46,7 +49,7 @@
         });
         
           var dcmap = L.map('map');
-		  dcmap.setView([38.94, -77.01], 11);
+		  dcmap.setView([38.9425, -77.01], 11);
           dcmap.addLayer(layer);
 	
     var blueL = "Blue Line";
@@ -2195,7 +2198,25 @@
 
 	function ZoomDowntown(){
 	
-	    dcmap.setZoomAround([38.89, -77.03], 14);
+	    dcmap.flyTo([38.8978, -77.03], 15);
+		
+	}
+	
+	function ZoomSouthwest(){
+	
+	    dcmap.flyTo([38.88, -77.008], 15);
+		
+	}
+	
+	function ZoomTysons(){
+	
+	    dcmap.flyTo([38.923, -77.222], 15);
+		
+	}
+	
+	function ZoomFull(){
+	
+	    dcmap.flyTo([38.9425, -77.01], 11);
 		
 	}
 	
