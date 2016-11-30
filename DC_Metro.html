@@ -33,6 +33,8 @@
 	    <p style="color:#DE1919;font-family:Arial">Click any icon for attribute information</p>
 		<button onclick="ZoomDowntown()">Downtown DC</button>
 		<button onclick="ZoomSouthwest()">Southwest DC/Capitol Hill</button>
+		<button onclick="ZoomShaw()">Shaw/Columbia Heights</button>
+		<button onclick="ZoomAlexandria()">Downtown Alexandria</button>
 		<button onclick="ZoomTysons()">Tysons</button>
 		<button onclick="ZoomFull()">Full Extent</button>
 		<p> </p>
@@ -44,6 +46,7 @@
 	</div>
     <div id="map"></div>
     <script>
+    //add basemap  
     var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
         });
@@ -52,6 +55,7 @@
 		  dcmap.setView([38.9425, -77.01], 11);
           dcmap.addLayer(layer);
 	
+	//add colored text strings for popups
     var blueL = "Blue Line";
     var blueLBreak = "Blue Line<br>";
     var blueLine = blueL.fontcolor("112EBF");
@@ -75,6 +79,7 @@
     var yellowL = "Yellow Line";
     var yellowLine = yellowL.fontcolor("F6DC22");
 
+	//Add variables for text content with colored text strings for popups
     var AddisonRd1String1 = "<b>Addison Road</b><br>";
     var AddisonRd1String2 = AddisonRd1String1.concat(blueLineBreak);
     var AddisonRd1Text = AddisonRd1String2.concat(silverLine);
@@ -421,6 +426,8 @@
     var WhiteFlint2Text = WhiteFlint2String.concat(redLine);
     var WoodleyPark1String = "<b>Woodley Park</b><br>";
     var WoodleyPark1Text = WoodleyPark1String.concat(redLine);
+	
+	//add geojson points for each station entrance
 	
 	var AddisonRd1 = {
 		"type": "Feature",
@@ -2054,6 +2061,7 @@
 		}
 	};
 	
+	//Add variables for colored circle icons for station entrances
 	
 	var BlackCircle = {
 	radius: 9,
@@ -2124,6 +2132,8 @@
 		}
 	}
 	
+	//Create arrays for geojsons of each color, color is assigned based on what line the station is for
+	
     var BlackStations = [AddisonRd1, Archives1, Ballston1, BenningRd1, BraddockRd1, CapitolHeights1, CapitolSouth1, Clarendon1, ColumbiaHeights1, 
 	ColumbiaHeights2, Courthouse1, CrystalCity1, EasternMarket1, EastFallsChurch1, FarragutWest1, FarragutWest2, FederalCenter1, FederalTriangle1, 
 	FoggyBottom1, FortTotten1, GalleryPlace1, GalleryPlace2, GalleryPlace3, Largo1, LEnfant1, LEnfant2, LEnfant3, McPhersonSq1, McPhersonSq2, 
@@ -2146,6 +2156,8 @@
 	var SilverStations = [Greensboro1, Greensboro2, McLean1, McLean2, RestonEast1, RestonEast2, SpringHill1, SpringHill2, TysonsCorner1, TysonsCorner2]
 
 	var YellowStations = [EisenhowerAve1, EisenhowerAve2, Huntington1, Huntington2]
+	
+	//assign colored circle icon variables to each of the geojsons 
 	
 	L.geoJSON(BlackStations, {
 		onEachFeature: onEachFeature,
@@ -2196,6 +2208,8 @@
 		}
 	}).addTo(dcmap);
 
+	//Create functions to fly to given portions of the DC area when the buttons to zoom to those areas are selected
+	
 	function ZoomDowntown(){
 	
 	    dcmap.flyTo([38.8978, -77.03], 15);
@@ -2205,6 +2219,18 @@
 	function ZoomSouthwest(){
 	
 	    dcmap.flyTo([38.88, -77.008], 15);
+		
+	}
+	
+	function ZoomShaw(){
+	 
+		dcmap.flyTo([38.9189, -77.025], 15);
+	 
+	}
+	
+	function ZoomAlexandria(){
+	
+	    dcmap.flyTo([38.805, -77.0598], 15);
 		
 	}
 	
@@ -2219,12 +2245,7 @@
 	    dcmap.flyTo([38.9425, -77.01], 11);
 		
 	}
-	
-   
-    
- 
-    
-			
+		
 	</script>
 </body>
 </html>
